@@ -30,4 +30,8 @@ class HomeController extends BaseController {
 			$this->layout->content 		= View::make('profile');
 	}
 
+	public function buyer(){
+		$this->layout->content 		= View::make('buyer');
+	}
+
 }

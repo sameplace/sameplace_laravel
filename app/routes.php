@@ -8,6 +8,9 @@ Route::get('profile', 					array('uses' => 'HomeController@profile'));
 Route::post('login', 					array('uses' => 'LoginController@login'));
 Route::get('logout', 					array('uses' => 'LoginController@logout'));
 
+//buyer side
+Route::get('buyer', 					array('uses' => 'HomeController@buyer'));
+
 //curls
 Route::get('fetchData', 				array('uses' => 'DataHandlerController@fetchData'));
 Route::get('sendAndFetchData', 			array('uses' => 'DataHandlerController@sendAndFetchData'));
