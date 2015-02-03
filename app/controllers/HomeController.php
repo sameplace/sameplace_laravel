@@ -31,6 +31,8 @@ class HomeController extends BaseController {
 	}
 
 	public function buyer(){
+
+		View::share('footerBottom', 	'footerBottom');
 		$this->layout->content 		= View::make('buyer');
 	}
 

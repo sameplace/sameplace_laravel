@@ -489,7 +489,8 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .contact.available {color: #CDCDCD;background: #061B28;padding: 20px 10px;opacity: 1}
 .buyer .contact.available:hover {color: #fff;text-decoration: none;}
 .buyer .contact.available span {display: block;}
-.buyer .contentBox {background: #fff;color: #000;padding: 20px;border-radius: 0 5px 5px 0px;min-height: 246px;}
+.buyer .contentBox {background: #fff;color: #000;padding: 20px;border-radius: 0 5px 5px 0px;min-height: 550px;}
+.footerBottom {bottom:0; right: 0; left: 0; position: fixed;}
 /* Technology page END */
 
 @media (max-width: 767px) {
