@@ -1,6 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+<script type="text/javascript">
+	$(function() {
+		$( "#emailAccordion, #peopleAccordion" ).accordion({
+			heightStyle: "content"
+		});
+	});
+</script>
 <div class="buyer">
 	<div class="container">
 		<h1 class="text-center">Buyer</h1>
@@ -47,20 +54,141 @@
 			<div class="col-xs-9 contentBox">
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="documents">
-						<p>If showing Documents, then this is a table of documents, where each row shows a document, and columns 
+						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+							<div class="filter">
+								<div class="filterTitle lightGrayBorder clearfix">
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+								</div>
+								<div class="filterData">
+									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
 							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
 							view can be dismissed to return to the table.</p>
-					</div>
-					<div role="tabpanel" class="tab-pane fade in" id="people">
-						<p>If showing People, then this is a table of people, where each row shows a person, and columns show 
+								</div>
+							</div>
+						</div>
+						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+							<div class="filter">
+								<div class="filterTitle lightGrayBorder clearfix">
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+								</div>
+								<div class="filterData">
+									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
+							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
+							view can be dismissed to return to the table.</p>
+								</div>
+							</div>
+						</div>
+						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+							<div class="filter">
+								<div class="filterTitle lightGrayBorder clearfix">
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+								</div>
+								<div class="filterData">
+									<p class="ng-binding">If showing People, then this is a table of people, where each row shows a person, and columns show 
 						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
 						shows contact detail in this space. That detail can be dismissed to return to the table.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade in" id="people">
+						<div class="filterBlock col-xs-12 ng-scope">
+							<div class="filter">
+								<div id="peopleAccordion">
+								  <h3>Section 1</h3>
+								  <div class="section">
+									<ul class="list-group">
+										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
+						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
+						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
+										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+									</ul>
+								  </div>
+								  <h3>Section 2</h3>
+								  <div class="section">
+								    <ul class="list-group">
+										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
+						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
+						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
+										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+									</ul>
+								  </div>
+								  <h3>Section 3</h3>
+								  <div class="section">
+								    <ul class="list-group">
+										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
+						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
+						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
+										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+									</ul>
+								  </div>
+								  <h3>Section 4</h3>
+								  <div class="section">
+								    <ul class="list-group">
+										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
+						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
+						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
+										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+									</ul>
+								  </div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade in" id="emails">
-						<p>If showing Email messages, then this is a table of messages, organized (perhaps) by thread, where each 
-						row is an email message and columns show things like Sender, To, CC, date, names of aMachments, etc. 
-						Message detail brings up a dismissable window; other items bring up the appropriate data type tab 
-						(Documents or People) with the appropriate detail view selected.</p>
+						<div class="filterBlock col-xs-12 ng-scope">
+							<div class="filter">
+								<div id="emailAccordion">
+								  	<h3>Section 1</h3>
+								 	<div class="section">
+										<div class="message clearfix col-xs-12 ng-scope">
+											<div class="row">
+												<div class="messageHeader clearfix">
+													<div class="row">
+														<div class="col-xs-6 messageFrom">
+															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
+														</div>
+														<div class="col-xs-6 messageCreated ng-binding">
+															
+														</div>
+													</div>
+												</div>
+												<h4 class="ng-binding">The Bat</h4>
+												<div class="col-xs-12 messageContent ng-binding">
+													=0Aaaaaaaaaaa
+												</div>
+												<a class="col-xs-12 messageContent threeDots" href="">...</a>
+											</div>
+										</div>
+								  	</div>
+								  	<h3>Section 2</h3>
+								  	<div class="section">
+										<div class="message clearfix col-xs-12 ng-scope">
+											<div class="row">
+												<div class="messageHeader clearfix">
+													<div class="row">
+														<div class="col-xs-6 messageFrom">
+															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
+														</div>
+														<div class="col-xs-6 messageCreated ng-binding">
+															
+														</div>
+													</div>
+												</div>
+												<h4 class="ng-binding">The Bat</h4>
+												<div class="col-xs-12 messageContent ng-binding">
+													=0Aaaaaaaaaaa
+												</div>
+												<a class="col-xs-12 messageContent threeDots" href="">...</a>
+											</div>
+										</div>
+								  	</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

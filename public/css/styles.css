@@ -405,7 +405,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
 .btn-success_head:hover { box-shadow:0px 0px 5px #fff; background:#e74e15; border:none; color:#fff; }
 .btn-primary.share:active, .btn-success_head.share:active, .btn-primary.share:focus, .btn-success_head.share:focus {box-shadow:0px 0px 10px #e74e15;outline:none;border:1px solid transparent;padding:20px !important; background:#e74e15;}
 /* Technology page START */
-#service h1, .service h1 {color: #322A2A;font-size: 36px;font-weight: bold;font-style: italic;font-family: 'Dosis';}
+#service h1, .service h1, .message h4 {color: #322A2A;font-size: 36px;font-weight: bold;font-style: italic;font-family: 'Dosis';}
 #service > .container {position: relative;z-index: 100;color: #fff;border-radius: 5px;padding: 20px 40px;}
 table {width: 100%;border-collapse: collapse;}
 th {color: #D5D5D5;font-weight:normal;font-size: 18px;font-style: italic;text-shadow: 2px 2px 3px #818181;}
@@ -430,6 +430,7 @@ table td {font-size:14px;}
 .filterData, .dealspaceBlock p {background: rgb(168, 208, 215);border: 1px solid rgb(146, 181, 187);box-shadow: 0px 0px 3px rgb(137, 174, 181);margin: 10px;padding: 8px;color: #fff;}
 .dealspaceBlock {text-align: center;}
 .filter, .filter p {color: #fff;line-height: 26px;}
+#accordion p {color: #000;}
 .dealspaceBlock p {background: transparent;border: 1px solid #454140;box-shadow: 0px 0px 3px #4C3F3A;color: #000;font-style: italic;text-align: center;}
 .dealspaceBlock p:nth-of-type(1) {background: #e74e15;border: 1px solid #9E3913;box-shadow: 0px 0px 3px #892E0C;}
 .lightGrayBg {background-color: #6B6B6B;}
@@ -476,10 +477,12 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .messageFrom, .messageContent {text-align: left;}
 .messageCreated {text-align: right;font-style: italic;}
 .messageContent {color: #ccc;font-size: 16px;margin-top: 10px;}
-.message h1 {margin: 15px 0;color: #E47850;padding: 0;font-size: 26px;}
+.message h1, .message h4 {margin: 15px 0;color: #E47850;padding: 0;font-size: 26px;}
 .threeDots:hover {text-decoration: none;}
 .buyer {padding: 70px 20px;background: url('http://foundation.zurb.com/assets/img/marquee-stars.svg') repeat #060606;color: #fff;}
 .buyer h1 {font-size: 24px;font-weight: bold;}
+.buyer h2 {float:none;}
+.buyer h4 {text-align: center;}
 .buyer ul {display: block;padding: 0 15px;border: none;}
 .buyer .nav-tabs>li, .buyer .nav-tabs>li a {display: block;float: none;margin-bottom: 30px;border-radius: 5px 0px 0px 5px;background: #061B28;color: #Fff;transition: all ease 0.2s;-moz-transition: all ease 0.2s;-webkit-transition: all ease 0.2s;-o-transition: all ease 0.2s;border: none;}
 .buyer .nav-tabs>li a {padding: 20px 15px;margin: 0;}

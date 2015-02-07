@@ -39,7 +39,7 @@
 	<section class="service">
 		<div class="container">
 			<div class="clearfix">
-				<div class="col-xs-12">s
+				<div class="col-xs-12">
 					<div id="changeable" class="clearfix">
 						<div class="animate-switch-container col-xs-6 col-xs-push-3" ng-switch on="selection">
 							<div class="animate-switch" ng-switch-default>

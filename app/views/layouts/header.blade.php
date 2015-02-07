@@ -8,12 +8,13 @@
     <% HTML::style('css/bootstrap.min.css'); %>
     <% HTML::style('css/social_buttons.css'); %>
     <% HTML::style('css/charts.css'); %>
-    <% HTML::style('//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css'); %>
+    <% HTML::style('//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css'); %>
     <% HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'); %>
     <% HTML::style('http://fonts.googleapis.com/css?family=Dosis'); %>
     <% HTML::style('css/styles.css'); %>
     
     <% HTML::script('js/jquery.min.js'); %>
+    <% HTML::script('//code.jquery.com/ui/1.11.2/jquery-ui.js'); %>
     <% HTML::script('js/bootstrap.min.js'); %>
     <% HTML::script('js/responsive-nav.js'); %>
     <% HTML::script('js/jquery.flot.min.js'); %>
