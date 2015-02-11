@@ -57,7 +57,7 @@
 						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
 							<div class="filter">
 								<div class="filterTitle lightGrayBorder clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> First Document</h2>
 								</div>
 								<div class="filterData">
 									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
@@ -69,7 +69,7 @@
 						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
 							<div class="filter">
 								<div class="filterTitle lightGrayBorder clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Second Document</h2>
 								</div>
 								<div class="filterData">
 									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
@@ -81,12 +81,12 @@
 						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
 							<div class="filter">
 								<div class="filterTitle lightGrayBorder clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"><i class="fa fa-user fa-2x"></i> Lorem ipsum</h2>
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Third Document</h2>
 								</div>
 								<div class="filterData">
-									<p class="ng-binding">If showing People, then this is a table of people, where each row shows a person, and columns show 
-						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
-						shows contact detail in this space. That detail can be dismissed to return to the table.</p>
+									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
+							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
+							view can be dismissed to return to the table.</p>
 								</div>
 							</div>
 						</div>
@@ -95,43 +95,44 @@
 						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
 								<div id="peopleAccordion">
-								  <h3>Section 1</h3>
+								  <h3>Monta Ellis</h3>
 								  <div class="section">
 									<ul class="list-group">
-										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">Monta Ellis</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
 						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
 						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+										<li class="list-group-item"><a href="mailto:email@email">montaellis@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Section 2</h3>
+								  <h3>Dirk Nowitzki</h3>
 								  <div class="section">
 								    <ul class="list-group">
-										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">Dirk Nowitzki</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
 						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
 						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+										<li class="list-group-item"><a href="mailto:email@email">dirknowitzki@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Section 3</h3>
+								  <h3>Rajon Rondo</h3>
 								  <div class="section">
 								    <ul class="list-group">
+										<li class="list-group-item">Rajon Rondo</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
 						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
 						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+										<li class="list-group-item"><a href="mailto:email@email">rajonrondo@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Section 4</h3>
+								  <h3>Tyson Chandler</h3>
 								  <div class="section">
 								    <ul class="list-group">
-										<li class="list-group-item">Sed non urna. Donec et ante.</li>
+										<li class="list-group-item">Tyson Chandler</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
 						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
 						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">email@email.com</a></li>
+										<li class="list-group-item"><a href="mailto:email@email">tysonchandler@email.com</a></li>
 									</ul>
 								  </div>
 								</div>
@@ -158,9 +159,8 @@
 												</div>
 												<h4 class="ng-binding">The Bat</h4>
 												<div class="col-xs-12 messageContent ng-binding">
-													=0Aaaaaaaaaaa
+													This is an email message
 												</div>
-												<a class="col-xs-12 messageContent threeDots" href="">...</a>
 											</div>
 										</div>
 								  	</div>
@@ -178,11 +178,10 @@
 														</div>
 													</div>
 												</div>
-												<h4 class="ng-binding">The Bat</h4>
+												<h4 class="ng-binding">The Joker</h4>
 												<div class="col-xs-12 messageContent ng-binding">
-													=0Aaaaaaaaaaa
+													This is second email message
 												</div>
-												<a class="col-xs-12 messageContent threeDots" href="">...</a>
 											</div>
 										</div>
 								  	</div>
