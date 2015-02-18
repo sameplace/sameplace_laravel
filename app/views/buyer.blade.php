@@ -10,24 +10,25 @@
 </script>
 <div class="buyer">
 	<div class="container">
-		<h1 class="text-center">Buyer</h1>
+		<!-- <h1 class="text-center">Buyer</h1> -->
 		<div class="col-xs-12">
 			<div class="buyerInfo clearfix">
 				<div class="col-xs-3">
-					<img class="img-responsive" src="http://i.huffpost.com/gen/1462378/thumbs/o-BAR-CHART-WITH-SMARTPHONES-facebook.jpg" alt="">
+					<img class="img-responsive" src="/images/female.jpg" alt="" width="200">
 				</div>
 				<div class="col-xs-9">
 					<div class="col-xs-6">
 						<div class="row">
 							<p class="name">Sue Smith, VP / Sales</p>
-							<p class="email">Phone // Email</p>
-							<p class="socials">LinkedIN // Facebook //</p>
+							<p class="email">650.814.8981 // <a href="mailto:sue@seller.com">sue@seller.com</a></p>
+							<p class="socials"><a href="www.linkedin.com/in/mdrummond/en">LinkedIN</a> // <a href="www.facebook.com/wowd">Facebook</a></p>
 						</div>
 					</div>
 					<div class="col-xs-6">
-						<a class="contact blink available" href="mailto:email@email.com">
-							Available Now! 
-							<span>(click to contact)</span>
+
+							Sue is available now. Click here to contact her.
+						<a href="mailto:sue@seller.com">
+							green dot
 						</a>
 					</div>
 				</div>
