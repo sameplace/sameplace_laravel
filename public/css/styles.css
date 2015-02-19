@@ -479,11 +479,14 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .messageContent {color: #ccc;font-size: 16px;margin-top: 10px;}
 .message h1, .message h4 {margin: 15px 0;color: #E47850;padding: 0;font-size: 26px;}
 .threeDots:hover {text-decoration: none;}
-.buyer {padding: 70px 20px;background: url('http://foundation.zurb.com/assets/img/marquee-stars.svg') repeat #060606;color: #fff;}
+.buyer {padding: 70px 20px;background: url('http://foundation.zurb.com/assets/img/marquee-stars.svg') repeat #060606;color: #fff;font-family: "Dosis";}
 .buyer h1 {font-size: 24px;font-weight: bold;}
 .buyer h2 {float:none;}
 .buyer h4 {text-align: center;}
-.buyer ul {display: block;padding: 0 15px;border: none;}
+.buyer .ui-accordion-content {margin: 0 0 20px 0; padding: 10px;}
+.buyer .ui-accordion-content ul {padding: 0;margin: 0;}
+.buyer ul {display: block;padding: 0 15px;border: none;font-family: "Dosis";}
+.buyer ul li {background: transparent;border: none;font-family: "Dosis";}
 .buyer .nav-tabs>li, .buyer .nav-tabs>li a {display: block;float: none;margin-bottom: 30px;border-radius: 5px 0px 0px 5px;background: #061B28;color: #Fff;transition: all ease 0.2s;-moz-transition: all ease 0.2s;-webkit-transition: all ease 0.2s;-o-transition: all ease 0.2s;border: none;}
 .buyer .nav-tabs>li a {padding: 20px 15px;margin: 0;}
 .buyer .nav-tabs>li.active, .buyer .nav-tabs>li.active a {background: #fff;color: #061B28;border: none;margin-right: -15px;}
@@ -494,6 +497,11 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .contact.available span {display: block;}
 .buyer .contentBox {background: #fff;color: #000;padding: 20px;border-radius: 0 5px 5px 0px;min-height: 550px;}
 .footerBottom {bottom:0; right: 0; left: 0; position: fixed;}
+.green-dot {text-align: center; display: block;}
+.green-dot span{width: 30px; height: 30px;display: block;margin: 0 auto;background: #08C527;border-radius: 50%;}
+.buyer a {color: #fff;}
+.filter h2 {background: #C84D4D; color: #fff;border: none;border-bottom: 8px solid #6B6B6B;font-family: "Dosis";}
+.filter h2:active, .filter h2:focus {outline: none;}
 /* Technology page END */
 
 @media (max-width: 767px) {

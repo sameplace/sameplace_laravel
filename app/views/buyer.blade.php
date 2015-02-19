@@ -26,9 +26,9 @@
 					</div>
 					<div class="col-xs-6">
 
+						<a class="green-dot" href="mailto:sue@seller.com">
 							Sue is available now. Click here to contact her.
-						<a href="mailto:sue@seller.com">
-							green dot
+							<span></span>
 						</a>
 					</div>
 				</div>
@@ -55,9 +55,9 @@
 			<div class="col-xs-9 contentBox">
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="documents">
-						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
-								<div class="filterTitle lightGrayBorder clearfix">
+								<div class="filterTitle clearfix">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> First Document</h2>
 								</div>
 								<div class="filterData">
@@ -67,9 +67,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
-								<div class="filterTitle lightGrayBorder clearfix">
+								<div class="filterTitle clearfix">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Second Document</h2>
 								</div>
 								<div class="filterData">
@@ -79,9 +79,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="filterBlock col-xs-12 col-sm-6 col-md-4 ng-scope">
+						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
-								<div class="filterTitle lightGrayBorder clearfix">
+								<div class="filterTitle clearfix">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Third Document</h2>
 								</div>
 								<div class="filterData">
@@ -96,8 +96,8 @@
 						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
 								<div id="peopleAccordion">
-								  <h3>Monta Ellis</h3>
-								  <div class="section">
+								  <h2>Monta Ellis</h2>
+								  <div class="section filterData">
 									<ul class="list-group">
 										<li class="list-group-item">Monta Ellis</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
@@ -106,8 +106,8 @@
 										<li class="list-group-item"><a href="mailto:email@email">montaellis@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Dirk Nowitzki</h3>
-								  <div class="section">
+								  <h2>Dirk Nowitzki</h2>
+								  <div class="section filterData">
 								    <ul class="list-group">
 										<li class="list-group-item">Dirk Nowitzki</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
@@ -116,8 +116,8 @@
 										<li class="list-group-item"><a href="mailto:email@email">dirknowitzki@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Rajon Rondo</h3>
-								  <div class="section">
+								  <h2>Rajon Rondo</h2>
+								  <div class="section filterData">
 								    <ul class="list-group">
 										<li class="list-group-item">Rajon Rondo</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
@@ -126,8 +126,8 @@
 										<li class="list-group-item"><a href="mailto:email@email">rajonrondo@email.com</a></li>
 									</ul>
 								  </div>
-								  <h3>Tyson Chandler</h3>
-								  <div class="section">
+								  <h2>Tyson Chandler</h2>
+								  <div class="section filterData">
 								    <ul class="list-group">
 										<li class="list-group-item">Tyson Chandler</li>
 										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
