@@ -21,7 +21,7 @@
 						<div class="row">
 							<p class="name">Sue Smith, VP / Sales</p>
 							<p class="email">650.814.8981 // <a href="mailto:sue@seller.com">sue@seller.com</a></p>
-							<p class="socials"><a href="www.linkedin.com/in/mdrummond/en">LinkedIN</a> // <a href="www.facebook.com/wowd">Facebook</a></p>
+							<p class="socials"><a href="http://www.linkedin.com/in/mdrummond/en">LinkedIN</a> // <a href="http://www.facebook.com/wowd">Facebook</a></p>
 						</div>
 					</div>
 					<div class="col-xs-6">
