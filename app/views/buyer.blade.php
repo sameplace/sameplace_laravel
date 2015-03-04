@@ -27,8 +27,9 @@
 					<div class="col-xs-6">
 
 						<a class="green-dot" href="mailto:sue@seller.com">
-							Sue is available now. Click here to contact her.
+							Sue is available now.
 							<span></span>
+							Click here to contact her.
 						</a>
 					</div>
 				</div>
@@ -144,11 +145,11 @@
 						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
 								<div id="emailAccordion">
-								  	<h3>Section 1</h3>
-								 	<div class="section">
-										<div class="message clearfix col-xs-12 ng-scope">
+								  	<h2>Section 1</h2>
+								 	<div class="section emailData">
+										<div class="clearfix col-xs-12 ng-scope">
 											<div class="row">
-												<div class="messageHeader clearfix">
+												<div class="clearfix">
 													<div class="row">
 														<div class="col-xs-6 messageFrom">
 															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
@@ -165,11 +166,11 @@
 											</div>
 										</div>
 								  	</div>
-								  	<h3>Section 2</h3>
-								  	<div class="section">
-										<div class="message clearfix col-xs-12 ng-scope">
+								  	<h2>Section 2</h2>
+								  	<div class="section emailData">
+										<div class="clearfix col-xs-12 ng-scope">
 											<div class="row">
-												<div class="messageHeader clearfix">
+												<div class="clearfix">
 													<div class="row">
 														<div class="col-xs-6 messageFrom">
 															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
