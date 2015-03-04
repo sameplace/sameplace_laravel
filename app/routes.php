@@ -10,6 +10,7 @@ Route::get('logout', 					array('uses' => 'LoginController@logout'));
 
 //buyer side
 Route::get('buyer', 					array('uses' => 'HomeController@buyer'));
+Route::get('page/{hash}', 				array('uses' => 'PageController@page'));
 
 //curls
 Route::get('fetchData', 				array('uses' => 'DataHandlerController@fetchData'));
