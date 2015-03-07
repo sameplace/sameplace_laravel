@@ -8,7 +8,7 @@
 		});
 	});
 </script>
-<div class="buyer">
+<div class="buyer" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
 		<!-- <h1 class="text-center">Buyer</h1> -->
 		<div class="col-xs-12">
@@ -56,19 +56,20 @@
 			<div class="col-xs-9 contentBox">
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="documents">
-						<div class="filterBlock col-xs-12 ng-scope">
-							<div class="filter">
-								<div class="filterTitle clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> First Document</h2>
+						<div class="filterBlock col-xs-12 ng-scope" ng-repeat="dealspace in result | filter:search">
+							<div class="filter" data-ng-init="sendAndCatchDataMime('get_mime', dealspace.oid)" >
+								<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> {{dealspace.name}}</h2>
 								</div>
 								<div class="filterData">
-									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
-							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
-							view can be dismissed to return to the table.</p>
+									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
+									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
+									<p>{{single_dealspace[dealspace.num].Date}}</p>
 								</div>
 							</div>
 						</div>
-						<div class="filterBlock col-xs-12 ng-scope">
+
+						<!-- <div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
 								<div class="filterTitle clearfix">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Second Document</h2>
@@ -91,7 +92,8 @@
 							view can be dismissed to return to the table.</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
+
 					</div>
 					<div role="tabpanel" class="tab-pane fade in" id="people">
 						<div class="filterBlock col-xs-12 ng-scope">

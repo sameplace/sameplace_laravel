@@ -91,14 +91,18 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			whirlyOn();
 			$http({ 
 			method  :'GET',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.formData),
 			transformResponse: function(d, h) { return d; },
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.result = angular.fromJson(data);
+				console.log($scope.result);
+				var count = 0;
 				angular.forEach($scope.result, function(value) {
-					value['color'] = randomColor();
+					value['color'] 	= randomColor();
+					value['num'] 	= count;
+					count++;
 				});
 
 				whirlyOff();
@@ -109,7 +113,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			whirlyOn();
 			$http({ 
 			method  :'GET',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.formData),
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
@@ -149,15 +153,16 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				$scope.single_dealspace = angular.fromJson(data);
-				$scope.dealspace_name = name;
-				$scope.dealspace_id = oid;
+				$scope.single_dealspace 	= angular.fromJson(data);
+				$scope.dealspace_name 		= name;
+				$scope.dealspace_id 		= oid;
+				console.log($scope.single_dealspace);
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
 				whirlyOff();
@@ -172,13 +177,14 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.oid = {'oid' : oid, 'participants' : p};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.participants = angular.fromJson(data);
+				console.log($scope.participants);
 			});
 		};
 
@@ -189,7 +195,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.oid = {'oid' : oid, 'rename' : rename};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
@@ -206,7 +212,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.post_data = {'oid' : oid, 'old_pass' : old_pass, 'new_pass' : new_pass};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.post_data),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
@@ -223,7 +229,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
@@ -235,6 +241,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 					if(angular.isDefined($scope.mime)){
 						var type = $scope.mime.MimeType;
 						//condition if attachment is an image TODO yet
+						console.log($scope.mime + ' mime');
 						if(type.substring(0, 5)=='image'){
 							$scope.imageAttach = true;
 						} else {
@@ -255,7 +262,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
-			url: file,
+			url: '/'+file,
 			dataType:'image/gif',
 			data: $.param($scope.oid),
 			withCredentials: true,

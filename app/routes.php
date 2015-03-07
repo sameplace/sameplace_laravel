@@ -19,6 +19,7 @@ Route::get('get_data', 					array('uses' => 'DataHandlerController@get_data'));
 Route::post('get_single_dealspace', 	array('uses' => 'DataHandlerController@get_single_dealspace'));
 Route::post('get_participants', 		array('uses' => 'DataHandlerController@get_participants'));
 Route::post('get_mime', 				array('uses' => 'DataHandlerController@get_mime'));
+Route::post('get_attachment', 			array('uses' => 'DataHandlerController@get_attachment'));
 Route::get('get_user', 					array('uses' => 'DataHandlerController@get_user'));
 Route::post('change_pass', 				array('uses' => 'DataHandlerController@change_pass'));
 
