@@ -87,7 +87,6 @@ class DataHandlerController extends BaseController {
 
         $result = curl_exec( $ch );
         curl_close( $ch );
-
         echo $result;
 	}
 
@@ -158,8 +157,6 @@ class DataHandlerController extends BaseController {
 	public function get_attachment(){
 		self::fetchData('https://secure.bitway.com/sp/dispAttach.php');
 	}
-
-	
 
 	public function change_pass(){
 		$data = array('oid' => Input::get('oid'), 'op' => Input::get('old_pass'), 'np' => Input::get('new_pass'));

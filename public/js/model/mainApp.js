@@ -239,9 +239,9 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.check_oid = $scope.mime[0].oid;
 				$scope.mime = $scope.mime[1];
 					if(angular.isDefined($scope.mime)){
+						console.log($scope.mime + ' mime');
 						var type = $scope.mime.MimeType;
 						//condition if attachment is an image TODO yet
-						console.log($scope.mime + ' mime');
 						if(type.substring(0, 5)=='image'){
 							$scope.imageAttach = true;
 						} else {

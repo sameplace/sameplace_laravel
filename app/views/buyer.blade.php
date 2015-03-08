@@ -57,11 +57,11 @@
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="documents">
 						<div class="filterBlock col-xs-12 ng-scope" ng-repeat="dealspace in result | filter:search">
-							<div class="filter" data-ng-init="sendAndCatchDataMime('get_mime', dealspace.oid)" >
+							<div class="filter">
 								<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> {{dealspace.name}}</h2>
 								</div>
-								<div class="filterData">
+								<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', single_dealspace[dealspace.num].oid)">
 									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
 									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
 									<p>{{single_dealspace[dealspace.num].Date}}</p>
