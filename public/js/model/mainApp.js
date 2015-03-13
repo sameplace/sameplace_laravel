@@ -133,15 +133,17 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 		//get dealspace
 		$scope.sendAndCatchData = function(file, oid, name, parts) {
 			whirlyOn();
-			$scope.parties = parts;
-			$scope.selected_dealspace_oid = oid;
+			$scope.parties 					= parts;
+			$scope.selected_dealspace_oid 	= oid;
 
 			//get participants
 				var final_participants = '';
+				var participant_part;
 				var counter = 0;
 				angular.forEach($scope.parties, function(value) {
 					if(counter==0){
-						final_participants = value;
+						participant_part 		= value.split(':');
+						final_participants 		= participant_part[0];
 					} else {
 						final_participants = final_participants + ',' + value;
 					}
@@ -160,11 +162,14 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.single_dealspace 	= angular.fromJson(data);
+				console.log($scope.single_dealspace);
 				$scope.dealspace_name 		= name;
 				$scope.dealspace_id 		= oid;
-				console.log($scope.single_dealspace);
+				var participant_part 		= $scope.single_dealspace[0].pFrom.split(':');
+				$scope.participant_part 	= participant_part[0];
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
+				sendAndCatchDataMime('get_mime', $scope.single_dealspace[0].oid);
 				whirlyOff();
 
 
@@ -173,18 +178,16 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 		//get participants
 		var sendAndCatchDataParticipants = function(file, oid, p) {
-			whirlyOn();
-			$scope.oid = {'oid' : oid, 'participants' : p};
+			obj = {'oid' : oid, 'p' : p};
 			$http({
 			method  :'POST',
 			url: '/'+file,
-			data: $.param($scope.oid),
+			data: $.param(obj),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.participants = angular.fromJson(data);
-				console.log($scope.participants);
 			});
 		};
 
@@ -223,10 +226,11 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 		};
 
 		//get mime
-		$scope.sendAndCatchDataMime = function(file, oid) {
+		var sendAndCatchDataMime = function(file, oid) {
 			whirlyOn();
-			$scope.dealspace_oid = oid;
-			$scope.oid = {'oid' : oid};
+			console.log(oid + ' aaaaa');
+			$scope.dealspace_oid 	= oid;
+			$scope.oid 				= {'oid' : oid};
 			$http({
 			method  :'POST',
 			url: '/'+file,
@@ -252,6 +256,8 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 					} else { 
 						$scope.attachmentContent = '';
 					}
+
+					whirlyOff();
 			});
 		};
 

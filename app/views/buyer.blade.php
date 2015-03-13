@@ -8,6 +8,7 @@
 		});
 	});
 </script>
+<div class="whirly"></div>
 <div class="buyer" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
 		<!-- <h1 class="text-center">Buyer</h1> -->
@@ -61,7 +62,7 @@
 								<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> {{dealspace.name}}</h2>
 								</div>
-								<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', single_dealspace[dealspace.num].oid)">
+								<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
 									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
 									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
 									<p>{{single_dealspace[dealspace.num].Date}}</p>
@@ -96,51 +97,19 @@
 
 					</div>
 					<div role="tabpanel" class="tab-pane fade in" id="people">
-						<div class="filterBlock col-xs-12 ng-scope">
+						<div class="filterBlock col-xs-12 ng-scope"  ng-repeat="participant in participants | filter:search">
+
 							<div class="filter">
-								<div id="peopleAccordion">
-								  <h2>Monta Ellis</h2>
-								  <div class="section filterData">
-									<ul class="list-group">
-										<li class="list-group-item">Monta Ellis</li>
-										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
-						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
-						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">montaellis@email.com</a></li>
-									</ul>
-								  </div>
-								  <h2>Dirk Nowitzki</h2>
-								  <div class="section filterData">
-								    <ul class="list-group">
-										<li class="list-group-item">Dirk Nowitzki</li>
-										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
-						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
-						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">dirknowitzki@email.com</a></li>
-									</ul>
-								  </div>
-								  <h2>Rajon Rondo</h2>
-								  <div class="section filterData">
-								    <ul class="list-group">
-										<li class="list-group-item">Rajon Rondo</li>
-										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
-						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
-						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">rajonrondo@email.com</a></li>
-									</ul>
-								  </div>
-								  <h2>Tyson Chandler</h2>
-								  <div class="section filterData">
-								    <ul class="list-group">
-										<li class="list-group-item">Tyson Chandler</li>
-										<li class="list-group-item">If showing People, then this is a table of people, where each row shows a person, and columns show 
-						things like contact informaHon,role in the deal, last Hme on-­‐line, etc. Clicking on a person’s name 
-						shows contact detail in this space. That detail can be dismissed to return to the table.</li>
-										<li class="list-group-item"><a href="mailto:email@email">tysonchandler@email.com</a></li>
-									</ul>
-								  </div>
+								<div class="filterTitle clearfix">
+									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;">{{ participant.Name }}</h2>
+								</div>
+								<div class="filterData">
+									<h3>{{ participant.Name }}</h3>
+									<p class="ng-binding">Last time seen: {{ participant.mTime }} </p>
+									<p>{{ participant.Addr }}</p>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade in" id="emails">

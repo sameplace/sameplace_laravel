@@ -59,10 +59,9 @@ class DataHandlerController extends BaseController {
 	    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
 	    curl_setopt( $ch, CURLOPT_POST, true );
 	    curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Cookie: PHPSESSID='.$_COOKIE['PHPSESSID']));
-	    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
+	    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
 	    curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
 	    curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
-
 	    $result = curl_exec( $ch );
 	    curl_close( $ch );
 	    echo $result;
@@ -70,7 +69,6 @@ class DataHandlerController extends BaseController {
 
 	public static function sendAndFetchData($url, $data){
 	    $ch =  curl_init();
-
         $useragent = isset($z['useragent']) ? $z['useragent'] : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.2) Gecko/20100101 Firefox/10.0.2';
 
         curl_setopt( $ch, CURLOPT_URL, $url );
@@ -88,6 +86,7 @@ class DataHandlerController extends BaseController {
         $result = curl_exec( $ch );
         curl_close( $ch );
         echo $result;
+
 	}
 
 	public static function sendAndFetchDataDemo($url, $data){
@@ -143,11 +142,13 @@ class DataHandlerController extends BaseController {
 	}
 
 	public function get_participants(){
-		self::fetchData('https://secure.bitway.com/sp/a274.php');
+		$data = array('oid' => Input::get('oid'), 'p' => Input::get('p'));
+		self::sendAndFetchData('https://secure.bitway.com/sp/a274.php', $data);
 	}
 
 	public function get_mime(){
-		self::fetchData('https://secure.bitway.com/sp/jgm.php');
+		$data = array('oid' => Input::get('oid'));
+		self::sendAndFetchData('https://secure.bitway.com/sp/jgm.php', $data);
 	}
 
 	public function get_user(){
@@ -155,7 +156,8 @@ class DataHandlerController extends BaseController {
 	}
 
 	public function get_attachment(){
-		self::fetchData('https://secure.bitway.com/sp/dispAttach.php');
+		$data = array('oid' => Input::get('oid'));
+		self::sendAndFetchData('https://secure.bitway.com/sp/dispAttach.php', $data);
 	}
 
 	public function change_pass(){
