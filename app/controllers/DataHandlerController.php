@@ -133,6 +133,26 @@ class DataHandlerController extends BaseController {
 
 	}
 
+	public static function fetchAttachment($url, $data){
+	    $ch =  curl_init();
+
+	    $useragent = isset($z['useragent']) ? $z['useragent'] : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.2) Gecko/20100101 Firefox/10.0.2';
+
+		curl_setopt( $ch, CURLOPT_URL, $url );
+		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+		curl_setopt( $ch, CURLOPT_AUTOREFERER, true );
+		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
+		curl_setopt( $ch, CURLOPT_POST, true );
+		curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Cookie: PHPSESSID='.$_COOKIE['PHPSESSID']));
+		curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
+		curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
+		curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
+		$result = curl_exec( $ch );
+		curl_close( $ch );
+		dd($result);
+
+	}
+
 	public function get_data(){
 		self::fetchData('https://secure.bitway.com/sp/jgds.php');
 	}
@@ -157,7 +177,7 @@ class DataHandlerController extends BaseController {
 
 	public function get_attachment(){
 		$data = array('oid' => Input::get('oid'));
-		self::sendAndFetchData('https://secure.bitway.com/sp/dispAttach.php', $data);
+		self::fetchAttachment('https://secure.bitway.com/sp/dispAttach.php', $data);
 	}
 
 	public function change_pass(){

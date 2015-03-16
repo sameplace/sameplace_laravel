@@ -66,6 +66,7 @@
 									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
 									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
 									<p>{{single_dealspace[dealspace.num].Date}}</p>
+									<iframe src="{{ imagebase }}" style="width:600px; height:500px;" frameborder="0"></iframe>
 								</div>
 							</div>
 						</div>
@@ -106,7 +107,7 @@
 								<div class="filterData">
 									<h3>{{ participant.Name }}</h3>
 									<p class="ng-binding">Last time seen: {{ participant.mTime }} </p>
-									<p>{{ participant.Addr }}</p>
+									<p><a href="mailto:{{ participant.Addr }}">{{ participant.Addr }}</a></p>
 								</div>
 							</div>
 							

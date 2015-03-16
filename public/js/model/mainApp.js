@@ -172,7 +172,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				sendAndCatchDataMime('get_mime', $scope.single_dealspace[0].oid);
 				whirlyOff();
 
-
 			});
 		};
 
@@ -228,7 +227,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 		//get mime
 		var sendAndCatchDataMime = function(file, oid) {
 			whirlyOn();
-			console.log(oid + ' aaaaa');
 			$scope.dealspace_oid 	= oid;
 			$scope.oid 				= {'oid' : oid};
 			$http({
@@ -243,7 +241,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.check_oid = $scope.mime[0].oid;
 				$scope.mime = $scope.mime[1];
 					if(angular.isDefined($scope.mime)){
-						console.log($scope.mime + ' mime');
+						console.log($scope.mime);
 						var type = $scope.mime.MimeType;
 						//condition if attachment is an image TODO yet
 						if(type.substring(0, 5)=='image'){
@@ -278,7 +276,8 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				// $scope.attachmentContent = data;
 				$scope.imagebase = data;
 				// $("#target").attr("src", data);
-				console.log(data);
+				console.log($scope.imagebase + ' attachment');
+				whirlyOff();
 			});
 		};
 
