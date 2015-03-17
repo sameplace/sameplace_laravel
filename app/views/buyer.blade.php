@@ -66,7 +66,16 @@
 									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
 									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
 									<p>{{single_dealspace[dealspace.num].Date}}</p>
-									<iframe src="{{ imagebase }}" style="width:600px; height:500px;" frameborder="0"></iframe>
+									<div id="circleG">
+									<p class="ng-binding">Loading attachment</p>
+									<div id="circleG_1" class="circleG">
+									</div>
+									<div id="circleG_2" class="circleG">
+									</div>
+									<div id="circleG_3" class="circleG">
+									</div>
+									</div>
+									<div id="attachment-div"></div>
 								</div>
 							</div>
 						</div>

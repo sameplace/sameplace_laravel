@@ -80,6 +80,14 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			angular.element(".whirly").fadeOut('slow');
 		}
 
+		function dotsOn() {
+			angular.element("#circleG").css('display','block');
+		}
+
+		function dotsOff() {
+			angular.element("#circleG").fadeOut('slow');
+		}
+
 		function randomColor() {
 			var colors = ['#E87A1C', '#D7D67F', '#EF799D' , '#976BE4', '#09CFCF', '#C84D4D', '#CD3E3E'];
 			var random = Math.floor((Math.random()*colors.length));
@@ -226,7 +234,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 		//get mime
 		var sendAndCatchDataMime = function(file, oid) {
-			whirlyOn();
 			$scope.dealspace_oid 	= oid;
 			$scope.oid 				= {'oid' : oid};
 			$http({
@@ -249,35 +256,33 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 						} else {
 							$scope.imageAttach = false;
 						}
-						sendAndCatchDataAttachment('get_attachment', $scope.mime.oid);
+						sendAndCatchDataAttachment('get_attachment', $scope.mime.oid, $scope.mime.Name);
 
 					} else { 
 						$scope.attachmentContent = '';
 					}
 
-					whirlyOff();
 			});
 		};
 
 		//get attachment
-		var sendAndCatchDataAttachment = function(file, oid) {
-			whirlyOn();
+		var sendAndCatchDataAttachment = function(file, oid, name) {
+			dotsOn();
 			$scope.dealspace_oid = oid;
-			$scope.oid = {'oid' : oid};
+			$scope.oid = {'oid' : oid, 'name' : name};
 			$http({
 			method  :'POST',
 			url: '/'+file,
-			dataType:'image/gif',
+			// dataType:'image/gif',
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				// $scope.attachmentContent = data;
 				$scope.imagebase = data;
-				// $("#target").attr("src", data);
-				console.log($scope.imagebase + ' attachment');
-				whirlyOff();
+				var attachmentDiv = document.getElementById('attachment-div');
+				attachmentDiv.innerHTML = '<a href="' + $scope.imagebase + '">Download</a>';
+				dotsOff();
 			});
 		};
 
