@@ -62,6 +62,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 					var ulElement = $element.find('.list-inline');
 					showme('widget', 'toggler');
 					$element.find('#toggler').remove();
+
 					ulElement.append('<li><a href="/logout">Log out</a></li><li><a href="/dealspaces">Dealspaces</a></li><li><a href="/profile">Profile</a></li></ul>');
 
 					// setTimeout(function(){location.reload();}, 3000);
@@ -281,11 +282,11 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
-				attachmentDiv.innerHTML = '<a href="' + $scope.imagebase + '">Download</a>';
+				console.log($scope.imagebase);
+				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://dev.sameplaceref.com/files/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
 				dotsOff();
 			});
 		};
-
 
 		$scope.logout = function() {
 

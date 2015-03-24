@@ -2,6 +2,15 @@
 
 class DataHandlerController extends BaseController {
 
+	 protected $_apiKey       = '',
+              $_multipartURL = 'https://upload.view-api.box.com',
+              $_getURL       = 'https://view-api.box.com/1/documents',
+              $_sessionURL   = 'https://view-api.box.com/1/sessions';
+
+	public function __construct() {
+        $this->_apiKey = 'selz6i98q2wiv4hkwk2fdhqcbyovmsxb';
+    }
+
 	public static function Login($url, $data){
 	    $ch =  curl_init();
 
@@ -184,6 +193,11 @@ class DataHandlerController extends BaseController {
 		self::fetchData('https://secure.bitway.com/sp/jgu.php');
 	}
 
+	public static function box_api(){
+		$box = new DataHandlerController;
+		$box->fetchBox('https://view-api.box.com/1/documents');
+	}
+
 	public function get_attachment(){
 		$data = array('oid' => Input::get('oid'));
 		self::fetchAttachment('https://secure.bitway.com/sp/dispAttach.php', $data, Input::get('name'));
@@ -200,12 +214,59 @@ class DataHandlerController extends BaseController {
 		curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
 		curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
 		$result 	= curl_exec( $ch );
-		curl_close( $ch );
+	    if($result=='"OK"'){
+	        curl_setopt( $ch, CURLOPT_HEADER, true );
+	        $result = curl_exec( $ch );
+	        curl_close( $ch );
+
+	        //create session
+	        Session::put('logged', 1);
+
+	        $cookies = array();
+	        preg_match_all('/Set-Cookie:(?<cookie>\s{0,}.*)$/im', $result, $cookies);
+
+	        $cookieParts = array();
+	        preg_match_all('/Set-Cookie:\s{0,}(?P<name>[^=]*)=(?P<value>[^;]*).*?expires=(?P<expires>[^;]*).*?path=(?P<path>[^;]*).*?domain=(?P<domain>[^\s;]*).*?$/im', $result, $cookieParts);
+
+	        $cookie = $cookies['cookie'][0];
+	        $final_cookie = explode('; path', $cookie);
+	        $final_cookie = explode('PHPSESSID=', $final_cookie[0]);
+	        $cookie = $final_cookie[1];
+	        setcookie('PHPSESSID', $cookie, time()+3600, '/');
+	        
+	    } else {
+
+	    }
 	}
 
 	public function change_pass(){
 		$data = array('oid' => Input::get('oid'), 'op' => Input::get('old_pass'), 'np' => Input::get('new_pass'));
 		self::sendAndFetchData('https://secure.bitway.com/sp/a851.php', $data);
+	}
+
+	public function fetchBox($url){
+		$data = array();
+
+		$data['Authorization'] = 'Token selz6i98q2wiv4hkwk2fdhqcbyovmsxb';
+
+	    $ch = curl_init();
+	    $useragent = isset($z['useragent']) ? $z['useragent'] : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.2) Gecko/20100101 Firefox/10.0.2';
+
+	    curl_setopt( $ch, CURLOPT_URL, $url );
+	    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	    curl_setopt( $ch, CURLOPT_AUTOREFERER, true );
+	    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
+	    curl_setopt( $ch, CURLOPT_POST, true );
+	    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Authorization: Token ' . $this->_apiKey,
+	    ));
+	    curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
+	    curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
+	    $result = curl_exec( $ch );
+	    curl_close( $ch );
+	    dd($result);
+	    echo $result;
 	}
 
 }

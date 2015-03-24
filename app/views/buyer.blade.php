@@ -26,7 +26,6 @@
 						</div>
 					</div>
 					<div class="col-xs-6">
-
 						<a class="green-dot" href="mailto:sue@seller.com">
 							Sue is available now.
 							<span></span>
