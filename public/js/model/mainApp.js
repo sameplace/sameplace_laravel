@@ -283,13 +283,12 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
 				console.log($scope.imagebase);
-				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://dev.sameplaceref.com/files/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
+				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://www.sameplace.com/files/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
 				dotsOff();
 			});
 		};
 
 		$scope.logout = function() {
-
 			$http({
 			method  :'GET',
 			url:'logout',
