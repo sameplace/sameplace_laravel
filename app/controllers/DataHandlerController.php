@@ -68,7 +68,7 @@ class DataHandlerController extends BaseController {
 	    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
 	    curl_setopt( $ch, CURLOPT_POST, true );
 	    curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Cookie: PHPSESSID='.$_COOKIE['PHPSESSID']));
-	    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
+	    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
 	    curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
 	    curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
 	    $result = curl_exec( $ch );
