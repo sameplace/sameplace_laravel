@@ -11,7 +11,6 @@
 <div class="whirly"></div>
 <div class="buyer" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
-		<!-- <h1 class="text-center">Buyer</h1> -->
 		<div class="col-xs-12">
 			<div class="buyerInfo clearfix">
 				<div class="col-xs-3">

@@ -186,7 +186,7 @@ footer #goTop:hover {color: #fff;background: #5cb85c;padding: 15px;font-size: 16
 --------------------------------------------- */
 
 /* home elements start*/
-#home { color:#000; margin-top: 60px; /* very important, change it together with header height */  position: relative; min-height: 600px;}
+#home { color:#000; margin-top: 40px; /* very important, change it together with header height */  position: relative; min-height: 600px;}
 .real_time_deal {background: url('http://i.huffpost.com/gen/1462378/thumbs/o-BAR-CHART-WITH-SMARTPHONES-facebook.jpg') center center no-repeat;  color:#fff;  /* very important, change it together with header height */ min-height: 700px; text-shadow: 1px 1px 5px #000;}
 #headline_home {text-align: left; font-size: 40px;}
 .main_section_par {text-align: right; font-size: 20px; color: #6D6D6E;  }
