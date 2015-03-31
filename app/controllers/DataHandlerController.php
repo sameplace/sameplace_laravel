@@ -115,7 +115,6 @@ class DataHandlerController extends BaseController {
 	    curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
 
         $result = curl_exec( $ch );
-        dd(curl_getinfo($ch));
         curl_close( $ch );
 
         if($result=='"OK"'){
