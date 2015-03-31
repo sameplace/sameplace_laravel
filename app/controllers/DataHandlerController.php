@@ -116,11 +116,11 @@ class DataHandlerController extends BaseController {
 
         $result = curl_exec( $ch );
         dd(curl_getinfo($ch));
+        curl_close( $ch );
 
         if($result=='"OK"'){
 	        curl_setopt( $ch, CURLOPT_HEADER, true );
 	        $result = curl_exec( $ch );
-	        curl_close( $ch );
 
 	        //create session
 	        Session::put('logged', 1);
