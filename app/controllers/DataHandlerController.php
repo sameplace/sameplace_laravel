@@ -120,6 +120,7 @@ class DataHandlerController extends BaseController {
         } else {
            $result =  curl_exec($ch);
         }
+        dd($result);
         curl_close( $ch );
 
         if($result=='"OK"'){
