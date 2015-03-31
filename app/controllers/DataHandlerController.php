@@ -113,17 +113,18 @@ class DataHandlerController extends BaseController {
 	    curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
 
 	    curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
-        curl_setopt( $ch, CURLOPT_HEADER, true );
 
-        if (curl_exec($ch) === FALSE) {
-           die("Curl Failed: " . curl_error($ch));
-        } else {
-           $result =  curl_exec($ch);
-        }
-        
-        curl_close( $ch );
-
+       if (curl_exec($ch) === FALSE) {
+          die("Curl Failed: " . curl_error($ch));
+       } else {
+          $result =  curl_exec($ch);
+       }
+       
         if($result=='"OK"'){
+	        curl_setopt( $ch, CURLOPT_HEADER, true );
+	        $result = curl_exec( $ch );
+	        curl_close( $ch );
+
 	        //create session
 	        Session::put('logged', 1);
 
