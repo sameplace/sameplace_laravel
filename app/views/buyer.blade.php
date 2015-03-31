@@ -26,14 +26,16 @@
 						</div>
 					</div>
 					<div class="col-xs-6">
-<iframe src="http://docs.google.com/gview?url=http://89.216.16.193/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+
+<!-- <iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com/files/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+
 						<a class="green-dot" href="mailto:sue@seller.com">
 							Sue is available now.
 							<span></span>
 							Click here to contact her.
 						</a>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</div>
 		<div class="col-xs-12">
