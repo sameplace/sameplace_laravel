@@ -283,7 +283,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
 				console.log($scope.imagebase);
-				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com/files/' + $scope.imagebase + '&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
+				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com' + $scope.imagebase + '&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
 				dotsOff();
 			});
 		};
