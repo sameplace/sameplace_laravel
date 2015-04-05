@@ -10,6 +10,7 @@ class BaseController extends Controller {
 
 	public function __construct(){
 		$login_check = Session::get('logged');
+		View::share('buyer_page', 			false);
 
 		if(isset($login_check)){
 			View::share('logged', 	true);

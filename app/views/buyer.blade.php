@@ -67,32 +67,6 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- <div class="filterBlock col-xs-12 ng-scope">
-							<div class="filter">
-								<div class="filterTitle clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Second Document</h2>
-								</div>
-								<div class="filterData">
-									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
-							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
-							view can be dismissed to return to the table.</p>
-								</div>
-							</div>
-						</div>
-						<div class="filterBlock col-xs-12 ng-scope">
-							<div class="filter">
-								<div class="filterTitle clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> Third Document</h2>
-								</div>
-								<div class="filterData">
-									<p class="ng-binding">If showing Documents, then this is a table of documents, where each row shows a document, and columns 
-							show things like type, date, size, etc. Clicking on a document shows it in this space. The document
-							view can be dismissed to return to the table.</p>
-								</div>
-							</div>
-						</div> -->
-
 					</div>
 					<div role="tabpanel" class="tab-pane fade in" id="people">
 						<div class="filterBlock col-xs-12 ng-scope"  ng-repeat="participant in participants | filter:search">

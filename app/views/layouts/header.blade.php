@@ -46,27 +46,31 @@
            <a class="navbar-brand" href="/">Sameplace</a>
          </div>
          <div class="navbar-collapse collapse">
+
            <div class="navbar-form navbar-right">
+
               <ul class="list-inline">
-                 
-                @if($logged)
-                  <li><a href="/logout">Log out</a></li>
-                  <li><a href="dealspaces">Dealspaces</a></li>
-                  <li><a href="profile">Profile</a></li>
-                </ul>
-                @else
-                  <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
-                </ul>
-                  <form id="widget" ng-submit="processLogin()">
-                    <div class="form-group">
-                      <input type="text" placeholder="Email" class="form-control" id="email" name="email" ng-model="email" onblur="if (this.placeholder=='') this.placeholder='Email';" onfocus="if (this.placeholder=='Email') this.placeholder='';">
-                    </div>
+                @if($buyer_page==false) 
+                  @if($logged)
+                    <li><a href="/logout">Log out</a></li>
+                    <li><a href="dealspaces">Dealspaces</a></li>
+                    <li><a href="profile">Profile</a></li>
+                  </ul>
+                  @else
+                    <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
+                  </ul>
+                    <form id="widget" ng-submit="processLogin()">
                       <div class="form-group">
-                      <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
-                    </div>
-                      <button type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-success transition">Go</button>
-                  </form>
+                        <input type="text" placeholder="Email" class="form-control" id="email" name="email" ng-model="email" onblur="if (this.placeholder=='') this.placeholder='Email';" onfocus="if (this.placeholder=='Email') this.placeholder='';">
+                      </div>
+                        <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
+                      </div>
+                        <button type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-success transition">Go</button>
+                    </form>
+                  @endif
                 @endif
+
 
            </div>
          </div><!--/.navbar-collapse -->
