@@ -25,9 +25,6 @@
 						</div>
 					</div>
 					<div class="col-xs-6">
-
-<!-- <iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com/files/Digitoy-Intel-Quotes-2015-02-13.pptx&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
-
 						<a class="green-dot" href="mailto:sue@seller.com">
 							Sue is available now.
 							<span></span>
@@ -43,13 +40,13 @@
 					<div role="tabpanel">
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active">
-								<a href="#documents" aria-controls="documents" role="tab" data-toggle="tab">Documents</a>
+								<a href="#documents" aria-controls="documents" role="tab" data-toggle="tab">Emails</a>
 							</li>
 							<li role="presentation">
 								<a href="#people" aria-controls="people" role="tab" data-toggle="tab">People</a>
 							</li>
 							<li role="presentation">
-								<a href="#emails" aria-controls="emails" role="tab" data-toggle="tab">Emails</a>
+								<a href="#emails" aria-controls="emails" role="tab" data-toggle="tab">Documents</a>
 							</li>
 						</ul>
 					</div>
@@ -67,16 +64,6 @@
 									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
 									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
 									<p>{{single_dealspace[dealspace.num].Date}}</p>
-									<div id="circleG">
-									<p class="ng-binding">Loading attachment</p>
-									<div id="circleG_1" class="circleG">
-									</div>
-									<div id="circleG_2" class="circleG">
-									</div>
-									<div id="circleG_3" class="circleG">
-									</div>
-									</div>
-									<div id="attachment-div"></div>
 								</div>
 							</div>
 						</div>
@@ -126,50 +113,18 @@
 					<div role="tabpanel" class="tab-pane fade in" id="emails">
 						<div class="filterBlock col-xs-12 ng-scope">
 							<div class="filter">
-								<div id="emailAccordion">
-								  	<h2>Section 1</h2>
-								 	<div class="section emailData">
-										<div class="clearfix col-xs-12 ng-scope">
-											<div class="row">
-												<div class="clearfix">
-													<div class="row">
-														<div class="col-xs-6 messageFrom">
-															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
-														</div>
-														<div class="col-xs-6 messageCreated ng-binding">
-															
-														</div>
-													</div>
-												</div>
-												<h4 class="ng-binding">The Bat</h4>
-												<div class="col-xs-12 messageContent ng-binding">
-													This is an email message
-												</div>
-											</div>
-										</div>
-								  	</div>
-								  	<h2>Section 2</h2>
-								  	<div class="section emailData">
-										<div class="clearfix col-xs-12 ng-scope">
-											<div class="row">
-												<div class="clearfix">
-													<div class="row">
-														<div class="col-xs-6 messageFrom">
-															<a href="mailto:uros@sameplace.com" class="ng-binding">uros@sameplace.com</a>
-														</div>
-														<div class="col-xs-6 messageCreated ng-binding">
-															
-														</div>
-													</div>
-												</div>
-												<h4 class="ng-binding">The Joker</h4>
-												<div class="col-xs-12 messageContent ng-binding">
-													This is second email message
-												</div>
-											</div>
-										</div>
-								  	</div>
-								</div>
+								  	
+									<div id="circleG">
+									<p class="ng-binding loading_att">Loading attachment</p>
+									<div id="circleG_1" class="circleG">
+									</div>
+									<div id="circleG_2" class="circleG">
+									</div>
+									<div id="circleG_3" class="circleG">
+									</div>
+									</div>
+									<div id="attachment-div"></div>
+
 							</div>
 						</div>
 					</div>

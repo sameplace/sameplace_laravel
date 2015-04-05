@@ -136,6 +136,7 @@ h1 { margin-bottom: .5em; }
 .nav-collapse .active a {background: none; border: black solid 2px; }
 .nav-collapse ul ul a {background: #ca3716; }
 .nav-collapse li{margin-bottom: 10px; }
+.loading_att { color: #000; }
 /* ------------------------------------------
   MASK
 --------------------------------------------- */
