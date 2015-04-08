@@ -282,7 +282,11 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
-				console.log($scope.imagebase);
+				var extension = $scope.imagebase.substr(id.length - 3);
+				if(extension=='gif'){
+					attachmentDiv.innerHTML = '<img src="' + $scope.imagebase + '" />'
+				}
+				else
 				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com' + $scope.imagebase + '&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
 				dotsOff();
 			});
