@@ -285,7 +285,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				var attachmentDiv = document.getElementById('attachment-div');
 				var extension = $scope.imagebase.substr($scope.imagebase.length - 3);
 				if(extension=='jpg' || extension=='JPG' || extension=='gif' || extension=='GIF' || extension=='JPEG' || extension=='jpeg'){
-					attachmentDiv.innerHTML = '<img src="' + $scope.imagebase + '" />'
+					attachmentDiv.innerHTML = '<div class="row text-center"><img src="' + $scope.imagebase + '" /></div>'
 				}
 				else
 				attachmentDiv.innerHTML = '<iframe src="http://docs.google.com/gview?url=http://tonic.sameplace.com' + $scope.imagebase + '&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>';
