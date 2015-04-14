@@ -282,7 +282,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
-				var extension = $scope.imagebase.substr(id.length - 3);
+				var extension = $scope.imagebase.substr($scope.imagebase.length - 3);
 				if(extension=='gif'){
 					attachmentDiv.innerHTML = '<img src="' + $scope.imagebase + '" />'
 				}
