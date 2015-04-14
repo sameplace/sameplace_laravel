@@ -71,14 +71,16 @@
 					<div role="tabpanel" class="tab-pane fade in" id="people">
 						<div class="filterBlock col-xs-12 ng-scope"  ng-repeat="participant in participants | filter:search">
 
-							<div class="filter">
-								<div class="filterTitle clearfix">
-									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;">{{ participant.Name }}</h2>
-								</div>
-								<div class="filterData">
-									<h3>{{ participant.Name }}</h3>
-									<p class="ng-binding">Last time seen: {{ participant.mTime }} </p>
-									<p><a href="mailto:{{ participant.Addr }}">{{ participant.Addr }}</a></p>
+							<div ng-if="participant.Name" class="col-xs-12 participants">
+								<div class="filter">
+									<div class="filterTitle clearfix">
+										<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;">{{ participant.Name }}</h2>
+									</div>
+									<div class="filterData">
+										<h3>{{ participant.Name }}</h3>
+										<p class="ng-binding">Last time seen: {{ participant.mTime }} </p>
+										<p><a href="mailto:{{ participant.Addr }}">{{ participant.Addr }}</a></p>
+									</div>
 								</div>
 							</div>
 							

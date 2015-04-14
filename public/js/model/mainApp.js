@@ -171,7 +171,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.single_dealspace 	= angular.fromJson(data);
-				console.log($scope.single_dealspace);
+				// console.log($scope.single_dealspace);
 				$scope.dealspace_name 		= name;
 				$scope.dealspace_id 		= oid;
 				var participant_part 		= $scope.single_dealspace[0].pFrom.split(':');
@@ -196,6 +196,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.participants = angular.fromJson(data);
+				console.log($scope.participants);
 			});
 		};
 
