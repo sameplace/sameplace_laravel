@@ -106,7 +106,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.result = angular.fromJson(data);
-				console.log($scope.result);
+				// console.log($scope.result);
 				var count = 0;
 				angular.forEach($scope.result, function(value) {
 					value['color'] 	= randomColor();
@@ -283,7 +283,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.imagebase = data;
 				var attachmentDiv = document.getElementById('attachment-div');
 				var extension = $scope.imagebase.substr($scope.imagebase.length - 3);
-				if(extension=='gif'){
+				if(extension=='jpg' || extension=='JPG' || extension=='gif' || extension=='GIF' || extension=='JPEG' || extension=='jpeg'){
 					attachmentDiv.innerHTML = '<img src="' + $scope.imagebase + '" />'
 				}
 				else

@@ -60,10 +60,10 @@
 								<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
 									<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> {{dealspace.name}}</h2>
 								</div>
-								<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
-									<h3>{{single_dealspace[dealspace.num].Subject}}</h3>
-									<p class="ng-binding">{{single_dealspace[dealspace.num].Content}} </p>
-									<p>{{single_dealspace[dealspace.num].Date}}</p>
+								<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')" ng-repeat="deal in single_dealspace | filter:search">
+									<h3>{{deal.Subject}}</h3>
+									<p class="ng-binding">{{deal.Content}} </p>
+									<p>{{deal.Date}}</p>
 								</div>
 							</div>
 						</div>
