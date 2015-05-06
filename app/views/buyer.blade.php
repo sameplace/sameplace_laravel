@@ -24,14 +24,10 @@
 							<p class="socials"><a href="http://www.linkedin.com/in/mdrummond/en">LinkedIN</a> // <a href="http://www.facebook.com/wowd">Facebook</a></p>
 						</div>
 					</div>
-					<div class="col-xs-6">
-						<a class="green-dot" href="mailto:sue@seller.com">
-							Sue is available now.
-							<span></span>
-							Click here to contact her.
-						</a>
-					</div>
-				</div> 
+				</div>
+				<div class="col-xs-6 clear">
+					<a class="green-dot" href="mailto:sue@seller.com">Sue is available now.<br><span>Click here</span> to contact her.</a>
+				</div>
 			</div>
 		</div>
 		<div class="col-xs-12">

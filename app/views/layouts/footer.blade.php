@@ -1,10 +1,5 @@
     <footer class="clearfix <% isset($footerBottom) ? $footerBottom : '' %>" >
-    <div class="col-xs-12 footer_content">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-6">Copyright 2014, Sameplace</div>
-    <div class="col-xs-3"></div>
-    </div>
-    <div class="back_up"><a id="goTop" href="javascript:void(0)">TOP</a></div>
+    <div class="back_up"><a id="goTop" href="javascript:void(0)">^<span>Back to top</span></a></div>
     </footer>
 
     <script src="js/fastclick.js"></script>
