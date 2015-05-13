@@ -6,6 +6,7 @@ class PageController extends BaseController {
 
 	public function page($page){
 
+
 		$data = array('u' => $page);
 		DataHandlerController::sendAndFetchDataDemo('https://secure.bitway.com/sp/demo.php', $data);
 

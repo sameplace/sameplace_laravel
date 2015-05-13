@@ -615,11 +615,11 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .threeDots:hover {text-decoration: none;}
 .buyer {padding: 70px 20px;background: #2d2e35;color: #fff;font-family: "Dosis";}
 .buyer h1 {font-size: 24px;font-weight: bold;}
-.buyer h2 {float:none;}
+.buyer h2 {float:none;border-bottom: none;font-size: 20px;}
 .buyer h4 {text-align: center;}
 .buyer .ui-accordion-content {margin: 0 0 20px 0; padding: 10px;}
 .buyer .ui-accordion-content ul {padding: 0;margin: 0;}
-.buyer ul {display: block;padding: 0 15px;border: none;font-family: "Dosis";}
+.buyer ul {display: block;border: none;font-family: "Dosis";padding: 0;}
 .buyer ul li {background: transparent;border: none;font-family: "Dosis";}
 .buyer .nav-tabs>li, .buyer .nav-tabs>li a {display: block;float: none;margin-bottom: 30px;border-radius: 5px 0px 0px 5px;background: #061B28;color: #Fff;transition: all ease 0.2s;-moz-transition: all ease 0.2s;-webkit-transition: all ease 0.2s;-o-transition: all ease 0.2s;border: none;}
 .buyer .nav-tabs>li a {padding: 20px 15px;margin: 0;}
@@ -631,19 +631,24 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .contact.available:hover {color: #fff;text-decoration: none;}
 .buyer .contact.available span {display: block;}
 .buyer .contentBox {background: #fff;color: #000;padding: 20px;border-radius: 0 5px 5px 0px;min-height: 550px;}
+.buyer .people {margin-top: 20px;}
+.buyer .people .peopleList li button {background: none;border: none;padding: 0;}
+.buyer .people .peopleList li button:hover, .buyer .people .peopleList li button:active, .buyer .people .peopleList li button:focus {outline: none;}
+.modal-dialog.buyerModal {top: 30px;color: #000;}
 .footerBottom {bottom:0; right: 0; left: 0; position: fixed;min-height: 50px;}
 .green-dot {text-align: left; padding: 10px;display: block;font-size: 12px;font-style: italic;}
 .green-dot:hover {text-decoration:none;}
 .green-dot span{color: #9a1b63;}
 .buyer a {color: #fff;}
 .filter h2 {background: #C84D4D; color: #fff;border: none;font-family: "Dosis";}
-.buyer h2 {border-bottom: 8px solid #6B6B6B;}
 .filter h2:active, .filter h2:focus {outline: none;}
 .buyer .ui-accordion-content.emailData {padding: 15px;}
 .buyer .ui-accordion-content.emailData h4 {font-size: 28px;margin: 10px auto 20px auto;font-style: italic;}
 .buyer .ui-accordion-content.emailData .messageContent {color: #fff;margin: 0;padding: 0;}
 .clear {clear:both;}
 .buyer .name, .buyer .email, .buyer .email a, .buyer .socials, .buyer .socials a {font-size: 20px;}
+.bg_gray { background: #2d2e35; }
+#emails { overflow: hidden; }
 /* Technology page END */
 
 @media (max-width: 767px) {

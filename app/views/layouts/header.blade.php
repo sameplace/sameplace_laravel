@@ -32,7 +32,7 @@
   </head>
 
 <!-- applied module and controller -->
-  <body ng-app="mainApp" ng-controller="mainController">
+  <body ng-app="mainApp" ng-controller="mainController" @if($buyer_page) class="bg_gray" @endif >
   <nav class="navbar navbar-default" role="navigation" id="header">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
