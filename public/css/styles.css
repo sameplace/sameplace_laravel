@@ -630,8 +630,9 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .contact.available {color: #CDCDCD;background: #061B28;padding: 20px 10px;opacity: 1}
 .buyer .contact.available:hover {color: #fff;text-decoration: none;}
 .buyer .contact.available span {display: block;}
-.buyer .contentBox {background: #fff;color: #000;padding: 20px;border-radius: 0 5px 5px 0px;min-height: 550px;}
-.buyer .people {margin-top: 20px;}
+.buyer .contentBox {background: #fff;color: #000;padding: 20px; border-radius: 5px; min-height: 550px;}
+.buyer .people {margin-top: 20px; background: rgb(168, 208, 215); padding: 5px;}
+.buyer .peopleDiv { background: #000; margin-top: 10px; border-radius: 0px 2px 2px 2px; padding: 15px; background: #C84D4D; }
 .buyer .people .peopleList li button {background: none;border: none;padding: 0;}
 .buyer .people .peopleList li button:hover, .buyer .people .peopleList li button:active, .buyer .people .peopleList li button:focus {outline: none;}
 .modal-dialog.buyerModal {top: 30px;color: #000;}
@@ -646,7 +647,10 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .ui-accordion-content.emailData h4 {font-size: 28px;margin: 10px auto 20px auto;font-style: italic;}
 .buyer .ui-accordion-content.emailData .messageContent {color: #fff;margin: 0;padding: 0;}
 .clear {clear:both;}
+.userMail { font-size: 14px; text-align: center;}
+.userMail input, .userMail button { font-size: 12px; padding: 10px; line-height: 20px;}
 .buyer .name, .buyer .email, .buyer .email a, .buyer .socials, .buyer .socials a {font-size: 20px;}
+.buyer .filterTitle, .buyer .filterData { margin: 10px 0; }
 .bg_gray { background: #2d2e35; }
 #emails { overflow: hidden; }
 /* Technology page END */

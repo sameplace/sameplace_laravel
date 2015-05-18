@@ -24,34 +24,39 @@
 			</div>
 		</div>
 		<div class="col-xs-12">
-			<div class="col-xs-3">
-				<h2>People</h2>
-				<div class="people">
-					<ul class="peopleList list-unstyled ng-scope" ng-repeat="participant in participants | filter:search">
+			<div class="col-xs-12 col-sm-3">
+				<div class="peopleDiv">
+					<h2>People</h2>
+					<div class="people">
+						<ul class="peopleList list-unstyled ng-scope" ng-repeat="participant in participants | filter:search">
 
-						<li><button data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</button></li>
+							<li><button data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</button></li>
 
-						<div class="modalPeopleInfo">
-							<div class="modal fade" id="{{ participant.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog buyerModal">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="myModalLabel">{{ participant.Name }}</h4>
-										</div>
-										<div class="modal-body">
-											Email: {{ participant.Addr }}<br>
-											Last time seen: {{ participant.mTime }}
+							<div class="modalPeopleInfo">
+								<div class="modal fade" id="{{ participant.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog buyerModal">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">{{ participant.Name }}</h4>
+											</div>
+											<div class="modal-body">
+												Email: {{ participant.Addr }}<br>
+												Last time seen: {{ participant.mTime }}
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 
-					</ul>
+						</ul>
+						<div class="userMail clearfix">
+							<input class="col-xs-12 col-sm-9" type="text" placeholder="New User Email">  <button class="btn-success col-xs-12 col-sm-3">Add</button>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-xs-9">
+			<div class="col-xs-12 col-sm-9">
 				<div class="documents">
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane fade in active" id="documents">
