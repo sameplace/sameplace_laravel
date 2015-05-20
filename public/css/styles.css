@@ -653,6 +653,10 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .filterTitle, .buyer .filterData { margin: 10px 0; }
 .bg_gray { background: #2d2e35; }
 #emails { overflow: hidden; }
+.small_view, .large_view {margin: 20px 0; background: #C84D4D;border: 1px solid #ccc;}
+.small_view div, .large_view div {border: 1px solid #ccc; border-right: none; border-bottom: none;font-size: 12px; line-height: 18px;word-break: break-word;padding: 0 8px;}
+.large_view div:nth-of-type(1), .large_view div:nth-of-type(2), .large_view div:nth-of-type(3), .large_view div:nth-of-type(4) {border-top: none;}
+.large_view div:nth-of-type(4n+1){border-left: none;}
 /* Technology page END */
 
 @media (max-width: 767px) {
@@ -682,9 +686,12 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
   #email_input, #main_paragraph > form > button.btn-success {display:block;width:100%;margin-bottom:15px;}
   #headline_home h4 {font-size: 22px;font-family: 'Dosis';}
 .filterWrap:hover .filterBlock:hover {width: 100%;margin-left: 0;}
+  .small_view div {border:none;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+  .small_view div:nth-of-type(odd){border-left:none;}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .large_view div {font-size: 12px;} 
   .svm {margin-top: 30px;font-size: 50px;}
   .demo-container {max-height: 550px;}
   .headline_home {margin-top: 0;font-size: 54px;}

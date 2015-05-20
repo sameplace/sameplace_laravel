@@ -51,7 +51,7 @@
 
 						</ul>
 						<div class="userMail clearfix">
-							<input class="col-xs-12 col-sm-9" type="text" placeholder="New User Email">  <button class="btn-success col-xs-12 col-sm-3">Add</button>
+							<input class="col-xs-12 col-sm-8" type="text" placeholder="New User Email">  <button class="btn-success col-xs-12 col-sm-4">Add</button>
 						</div>
 					</div>
 				</div>
@@ -68,10 +68,46 @@
 									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')" ng-repeat="deal in single_dealspace | filter:search">
 										<h3>{{deal.Subject}}</h3>
 										<p class="ng-binding">{{deal.Content}} </p>
-										<p>{{deal.Date}}</p>
 										<div role="tabpanel" class="tab-pane fade in" id="emails">
 											<div class="filterBlock col-xs-12 ng-scope">
-												<div class="filter">
+												<div class="filter clearfix">
+														<div class="large_view hidden-xs clearfix">
+															<div class="col-sm-2">Name</div>
+															<div class="col-sm-4">Sender</div>
+															<div class="col-sm-3">Type</div>
+															<div class="col-sm-3">Date</div>
+
+															<div class="col-sm-2">{{mime.Name}}</div>
+															<div class="col-sm-4">{{deal.FromAddr}}</div>
+															<div class="col-sm-3">{{mime.MimeType}}</div>
+															<div class="col-sm-3">{{deal.Date}}</div>
+														</div>
+
+														<div class="small_view hidden-sm hidden-md hidden-lg clearfix">
+															<div class="col-xs-6">Name</div>
+															<div class="col-xs-6">{{mime.Name}}</div>
+															<div class="col-xs-6">Sender</div>
+															<div class="col-xs-6">{{deal.FromAddr}}</div>
+															<div class="col-xs-6">Type</div>
+															<div class="col-xs-6">{{mime.MimeType}}</div>
+															<div class="col-xs-6">Date</div>
+															<div class="col-xs-6">{{deal.Date}}</div>
+														</div>
+<!-- 
+														<table class="table dissapear">
+															<tr>
+																<td>Name</td>
+																<td>Sender</td>
+																<td>Type</td>
+																<td>Date</td>
+															</tr>
+															<tr>
+															  <td>{{mime.Name}}</td>
+															  <td>{{deal.FromAddr}}</td>
+															  <td>{{mime.MimeType}}</td>
+															  <td>{{deal.Date}}</td>
+															</tr>
+														</table> -->
 
 														<div id="circleG">
 														<p class="ng-binding loading_att">Loading attachment</p>

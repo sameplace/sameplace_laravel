@@ -171,7 +171,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.single_dealspace 	= angular.fromJson(data);
-				// console.log($scope.single_dealspace);
+				console.log($scope.single_dealspace);
 				$scope.dealspace_name 		= name;
 				$scope.dealspace_id 		= oid;
 				var participant_part 		= $scope.single_dealspace[0].pFrom.split(':');
@@ -252,6 +252,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 					if(angular.isDefined($scope.mime)){
 						console.log($scope.mime);
 						var type = $scope.mime.MimeType;
+						$scope.mimeType = type;
 						//condition if attachment is an image TODO yet
 						if(type.substring(0, 5)=='image'){
 							$scope.imageAttach = true;
