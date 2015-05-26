@@ -30,28 +30,28 @@
 					<div class="people">
 						<ul class="peopleList list-unstyled ng-scope" ng-repeat="participant in participants | filter:search">
 
-							<li><button data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</button></li>
+						<li><button data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</button></li>
 
-							<div class="modalPeopleInfo">
-								<div class="modal fade" id="{{ participant.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog buyerModal">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title" id="myModalLabel">{{ participant.Name }}</h4>
-											</div>
-											<div class="modal-body">
-												Email: {{ participant.Addr }}<br>
-												Last time seen: {{ participant.mTime }}
-											</div>
+						<div class="modalPeopleInfo">
+							<div class="modal fade" id="{{ participant.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog buyerModal">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">{{ participant.Name }}</h4>
+										</div>
+										<div class="modal-body">
+											Email: {{ participant.Addr }}<br>
+											Last time seen: {{ participant.mTime }}
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
 
 						</ul>
 						<div class="userMail clearfix">
-							<input class="col-xs-12 col-sm-8" type="text" placeholder="New User Email">  <button class="btn-success col-xs-12 col-sm-4">Add</button>
+							<input class="col-xs-12 col-sm-8 personEmail" type="text" id="person_email" placeholder="Person Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Person Email'" >  <button class="btn-success col-xs-12 col-sm-4">Add</button>
 						</div>
 					</div>
 				</div>
@@ -63,22 +63,39 @@
 							<div class="filterBlock col-xs-12 ng-scope" ng-repeat="dealspace in result | filter:search">
 								<div class="filter">
 									<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
-										<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;"> {{dealspace.name}}</h2>
+										<h2 class="lightGrayBg ng-binding" style="background:#9a1b63;"> {{dealspace.name}}</h2>
 									</div>
 									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')" ng-repeat="deal in single_dealspace | filter:search">
-										<h3>{{deal.Subject}}</h3>
-										<p class="ng-binding">{{deal.Content}} </p>
+
+										<p class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</p>
+
+										<div class="modalPeopleInfo">
+											<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-dialog buyerModal">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+															<h4 class="modal-title" id="myModalLabel">{{deal.Subject}}</h4>
+														</div>
+														<div class="modal-body">
+															{{deal.Content}}
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
 										<div role="tabpanel" class="tab-pane fade in" id="emails">
 											<div class="filterBlock col-xs-12 ng-scope">
 												<div class="filter clearfix">
-														<div class="large_view hidden-xs clearfix">
+														<div data-toggle="modal" data-target="#document" class="large_view hidden-xs clearfix">
 															<div class="col-sm-2">Name</div>
 															<div class="col-sm-4">Sender</div>
 															<div class="col-sm-3">Type</div>
 															<div class="col-sm-3">Date</div>
 
 															<div class="col-sm-2">{{mime.Name}}</div>
-															<div class="col-sm-4">{{deal.FromAddr}}</div>
+															<div class="col-sm-4"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
 															<div class="col-sm-3">{{mime.MimeType}}</div>
 															<div class="col-sm-3">{{deal.Date}}</div>
 														</div>
@@ -87,38 +104,36 @@
 															<div class="col-xs-6">Name</div>
 															<div class="col-xs-6">{{mime.Name}}</div>
 															<div class="col-xs-6">Sender</div>
-															<div class="col-xs-6">{{deal.FromAddr}}</div>
+															<div class="col-xs-6"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
 															<div class="col-xs-6">Type</div>
 															<div class="col-xs-6">{{mime.MimeType}}</div>
 															<div class="col-xs-6">Date</div>
 															<div class="col-xs-6">{{deal.Date}}</div>
 														</div>
-<!-- 
-														<table class="table dissapear">
-															<tr>
-																<td>Name</td>
-																<td>Sender</td>
-																<td>Type</td>
-																<td>Date</td>
-															</tr>
-															<tr>
-															  <td>{{mime.Name}}</td>
-															  <td>{{deal.FromAddr}}</td>
-															  <td>{{mime.MimeType}}</td>
-															  <td>{{deal.Date}}</td>
-															</tr>
-														</table> -->
 
-														<div id="circleG">
-														<p class="ng-binding loading_att">Loading attachment</p>
-														<div id="circleG_1" class="circleG">
-														</div>
-														<div id="circleG_2" class="circleG">
-														</div>
-														<div id="circleG_3" class="circleG">
-														</div>
-														</div>
-														<div id="attachment-div"></div>
+
+															<div class="modal fade" id="document" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+																<div class="modal-dialog buyerModal">
+																	<div class="modal-content">
+																		<div class="modal-header">
+																			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																			<h4 class="modal-title" id="myModalLabel">{{mime.Name}}</h4>
+																		</div>
+																		<div class="modal-body">
+																			<div id="circleG">
+																			<p class="ng-binding loading_att">Loading attachment</p>
+																			<div id="circleG_1" class="circleG">
+																			</div>
+																			<div id="circleG_2" class="circleG">
+																			</div>
+																			<div id="circleG_3" class="circleG">
+																			</div>
+																			</div>
+																			<div id="attachment-div"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
 
 												</div>
 											</div>

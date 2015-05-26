@@ -85,3 +85,9 @@
             }
         });
     });
+
+    
+    var emptyInput = function() {
+      var input = document.getElementById('person_email');
+      input.value = null;
+    }
