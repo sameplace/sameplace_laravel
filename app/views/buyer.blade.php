@@ -30,7 +30,7 @@
 					<div class="people">
 						<ul class="peopleList list-unstyled ng-scope" ng-repeat="participant in participants | filter:search">
 
-						<li><button data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</button></li>
+						<li><a href="" data-toggle="modal" data-target="#{{ participant.oid }}">{{ participant.Name }}</a></li>
 
 						<div class="modalPeopleInfo">
 							<div class="modal fade" id="{{ participant.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -63,11 +63,9 @@
 							<div class="filterBlock col-xs-12 ng-scope" ng-repeat="dealspace in result | filter:search">
 								<div class="filter">
 									<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
-										<h2 class="lightGrayBg ng-binding" style="background:#9a1b63;"> {{dealspace.name}}</h2>
+										<h2 class="lightGrayBg ng-binding" style="background:#B23B7E;"> {{dealspace.name}}</h2>
 									</div>
-									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')" ng-repeat="deal in single_dealspace | filter:search">
-
-										<p class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</p>
+									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
 
 										<div class="modalPeopleInfo">
 											<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -85,30 +83,34 @@
 											</div>
 										</div>
 
-										<div role="tabpanel" class="tab-pane fade in" id="emails">
+										<div role="tabpanel" class="tab-pane fade in" id="emails" ng-repeat="deal in single_dealspace | filter:search">
 											<div class="filterBlock col-xs-12 ng-scope">
 												<div class="filter clearfix">
-														<div data-toggle="modal" data-target="#document" class="large_view hidden-xs clearfix">
-															<div class="col-sm-2">Name</div>
-															<div class="col-sm-4">Sender</div>
-															<div class="col-sm-3">Type</div>
-															<div class="col-sm-3">Date</div>
+														<div class="large_view hidden-xs clearfix">
+															<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
+															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Name</div>
+															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Sender</div>
+															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Type</div>
+															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Date</div>
 
-															<div class="col-sm-2">{{mime.Name}}</div>
-															<div class="col-sm-4"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
-															<div class="col-sm-3">{{mime.MimeType}}</div>
-															<div class="col-sm-3">{{deal.Date}}</div>
+															<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
+															<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.Name}}</div>
+															<div class="col-sm-3" data-toggle="modal" data-target="#document" ><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
+															<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.MimeType}}</div>
+															<div class="col-sm-3" data-toggle="modal" data-target="#document" >{{deal.Date}}</div>
 														</div>
 
 														<div class="small_view hidden-sm hidden-md hidden-lg clearfix">
-															<div class="col-xs-6">Name</div>
-															<div class="col-xs-6">{{mime.Name}}</div>
-															<div class="col-xs-6">Sender</div>
-															<div class="col-xs-6"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
-															<div class="col-xs-6">Type</div>
-															<div class="col-xs-6">{{mime.MimeType}}</div>
-															<div class="col-xs-6">Date</div>
-															<div class="col-xs-6">{{deal.Date}}</div>
+															<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
+															<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">Name</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.Name}}</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">Sender</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">Type</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.MimeType}}</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">Date</div>
+															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{deal.Date}}</div>
 														</div>
 
 
@@ -148,7 +150,7 @@
 
 									<div class="filter" ng-if="participant.Name">
 										<div class="filterTitle clearfix">
-											<h2 class="lightGrayBg ng-binding" style="background:#C84D4D;">{{ participant.Name }}</h2>
+											<h2 class="lightGrayBg ng-binding" style="background:#B23B7E;">{{ participant.Name }}</h2>
 										</div>
 										<div class="filterData">
 											<h3>{{ participant.Name }}</h3>

@@ -253,7 +253,25 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 						console.log($scope.mime);
 						var type = $scope.mime.MimeType;
 						$scope.mimeType = type;
-						//condition if attachment is an image TODO yet
+						var image_types = ['jpeg', 'JPEG', 'JPG', 'jpg', 'gif', 'GIF', 'png', 'PNG'];
+
+						//powerpoint type
+						if (type.indexOf("pptx") !=-1 || type.indexOf("ppt") !=-1) {
+						    $scope.mime.MimeType = 'Powerpoint File';
+						}
+
+						//image type
+						angular.forEach(image_types, function(value) {
+							if (type.indexOf(value) !=-1){
+							    $scope.mime.MimeType = 'Image File';
+							}
+						});
+
+						//text type
+						if (type.indexOf("doc") !=-1 || type.indexOf("docx") !=-1) {
+						    $scope.mime.MimeType = 'Textual File';
+						}
+
 						if(type.substring(0, 5)=='image'){
 							$scope.imageAttach = true;
 						} else {
