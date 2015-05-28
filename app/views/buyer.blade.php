@@ -66,24 +66,24 @@
 										<h2 class="lightGrayBg ng-binding" style="background:#B23B7E;"> {{dealspace.name}}</h2>
 									</div>
 									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
-
-										<div class="modalPeopleInfo">
-											<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-												<div class="modal-dialog buyerModal">
-													<div class="modal-content">
-														<div class="modal-header">
-															<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-															<h4 class="modal-title" id="myModalLabel">{{deal.Subject}}</h4>
-														</div>
-														<div class="modal-body">
-															{{deal.Content}}
+										<div role="tabpanel" class="tab-pane fade in" id="emails" ng-repeat="deal in single_dealspace | filter:search">
+											
+											<div class="modalPeopleInfo">
+												<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+													<div class="modal-dialog buyerModal">
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																<h4 class="modal-title" id="myModalLabel">{{deal.Subject}}</h4>
+															</div>
+															<div class="modal-body">
+																{{deal.Content}}
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
 
-										<div role="tabpanel" class="tab-pane fade in" id="emails" ng-repeat="deal in single_dealspace | filter:search">
 											<div class="filterBlock col-xs-12 ng-scope">
 												<div class="filter clearfix">
 														<div class="large_view hidden-xs clearfix">
