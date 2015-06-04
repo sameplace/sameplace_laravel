@@ -63,7 +63,7 @@
 							<div class="filterBlock col-xs-12 ng-scope" ng-repeat="dealspace in result | filter:search">
 								<div class="filter">
 									<div class="filterTitle clearfix" data-ng-init="sendAndCatchData('get_single_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
-										<h2 class="lightGrayBg ng-binding" style="background:#B23B7E;"> {{dealspace.name}}</h2>
+										<h2 class="lightGrayBg ng-binding" style="background:#C06C9B;"> {{dealspace.name}}</h2>
 									</div>
 									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
 										<div role="tabpanel" class="tab-pane fade in" id="emails" ng-repeat="deal in single_dealspace | filter:search">
@@ -150,7 +150,7 @@
 
 									<div class="filter" ng-if="participant.Name">
 										<div class="filterTitle clearfix">
-											<h2 class="lightGrayBg ng-binding" style="background:#B23B7E;">{{ participant.Name }}</h2>
+											<h2 class="lightGrayBg ng-binding" style="background:#C06C9B;">{{ participant.Name }}</h2>
 										</div>
 										<div class="filterData">
 											<h3>{{ participant.Name }}</h3>
