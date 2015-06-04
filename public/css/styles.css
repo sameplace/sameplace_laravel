@@ -659,7 +659,7 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .large_view div:nth-of-type(4n+1){border-left: none;}
 .message_clickable {cursor: pointer;}
 .personEmail {color: #000;}
-.filterData a {color:#0600FF;}
+.filterData a, .peopleList a {color:#0600FF;}
 
 ::-webkit-input-placeholder {
     color:    #000;
