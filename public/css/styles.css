@@ -651,7 +651,7 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .userMail input, .userMail button { font-size: 12px; padding: 10px; line-height: 20px;}
 .buyer .name, .buyer .email, .buyer .email a, .buyer .socials, .buyer .socials a {font-size: 20px;}
 .buyer .filterTitle, .buyer .filterData { margin: 10px 0; }
-.bg_gray { background: #2d2e35; }
+.bg_gray { background: #fff; }
 #emails { overflow: hidden; }
 .small_view, .large_view {/* margin: 20px 0; */ background: #fff; border: 1px solid #ccc;cursor: pointer;border-bottom: 3px solid #C8BAC2; color: #9a1b63;}
 .small_view div, .large_view div {border: 1px solid #ccc; border-right: none; border-bottom: none;font-size: 12px; line-height: 18px;word-break: break-word;padding: 0 8px; color: #9a1b63;}
