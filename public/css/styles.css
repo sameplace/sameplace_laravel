@@ -53,7 +53,7 @@ h1 { margin-bottom: .5em; }
   FIXED HEADER
 --------------------------------------------- */
 
-#header { background: #1C1C1C; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 0 10px; border: none; border-radius: 0;}
+#header { background: #C8BAC2; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 0 10px; border: none; border-radius: 0;}
 .logo {-webkit-tap-highlight-color: rgba(0,0,0,0); text-decoration: none; font-weight: bold; line-height: 55px; padding: 0 20px; color: #fff; float: left; font-size: 22px; }
 #login { float: right; }
 
@@ -169,7 +169,7 @@ h1 { margin-bottom: .5em; }
   FOOTER STYLING
 --------------------------------------------- */
 
-footer {text-align:center; font-size:16px;  color:#848484;  padding-top: 10px; margin-top: 2px; background: #2d2e35;}
+footer {text-align:center; font-size:16px;  color:#848484;  padding-top: 10px; margin-top: 2px; background: #C8BAC2;}
 footer p {margin-bottom:-2.5em; position: relative; }
 footer a,footer a:visited {color: #fff;  z-index:100; border-radius: 50%; -moz-border-radius: 50px;  width: 35px;height: 35px;display: inline-block;font-size: 40px; background: #2d2e35;border: 3px solid #fff;vertical-align: middle;line-height: 40px;text-align: center;margin-top: -50px;}
 footer a:hover {text-decoration:none; background-color:#848484; }
@@ -613,7 +613,7 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .messageContent {color: #ccc;font-size: 16px;margin-top: 10px;}
 .message h1, .message h4 {margin: 15px 0;color: #E47850;padding: 0;font-size: 26px;}
 .threeDots:hover {text-decoration: none;}
-.buyer {padding: 70px 20px;background: #2d2e35;color: #fff;font-family: "Dosis";}
+.buyer {padding: 70px 20px;background: #fff;color: #000;font-family: "Dosis";}
 .buyer h1 {font-size: 24px;font-weight: bold;}
 .buyer h2 {float:none;border-bottom: none;font-size: 20px;}
 .buyer h4 {text-align: center;}
@@ -640,7 +640,7 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .green-dot {text-align: left; padding: 10px;display: block;font-size: 12px;font-style: italic;}
 .green-dot:hover {text-decoration:none;}
 .green-dot span{color: #9a1b63;}
-.buyer a {color: #fff;}
+.buyer a {color: #FF02CC;}
 .filter h2 {background: #C84D4D; color: #fff;border: none;font-family: "Dosis";}
 .filter h2:active, .filter h2:focus {outline: none;}
 .buyer .ui-accordion-content.emailData {padding: 15px;}
