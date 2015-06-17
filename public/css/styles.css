@@ -53,7 +53,7 @@ h1 { margin-bottom: .5em; }
   FIXED HEADER
 --------------------------------------------- */
 
-#header { background: #C8BAC2; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 0 10px; border: none; border-radius: 0;}
+#header { background: #E6E4E8; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 0 10px; border: none; border-radius: 0;}
 .logo {-webkit-tap-highlight-color: rgba(0,0,0,0); text-decoration: none; font-weight: bold; line-height: 55px; padding: 0 20px; color: #fff; float: left; font-size: 22px; }
 #login { float: right; }
 
@@ -169,7 +169,7 @@ h1 { margin-bottom: .5em; }
   FOOTER STYLING
 --------------------------------------------- */
 
-footer {text-align:center; font-size:16px;  color:#848484;  padding-top: 10px; margin-top: 2px; background: #C8BAC2;}
+footer {text-align:center; font-size:16px;  color:#848484;  padding-top: 10px; margin-top: 2px; background: #E6E4E8;}
 footer p {margin-bottom:-2.5em; position: relative; }
 footer a,footer a:visited {color: #fff;  z-index:100; border-radius: 50%; -moz-border-radius: 50px;  width: 35px;height: 35px;display: inline-block;font-size: 40px; background: #2d2e35;border: 3px solid #fff;vertical-align: middle;line-height: 40px;text-align: center;margin-top: -50px;}
 footer a:hover {text-decoration:none; background-color:#848484; }
@@ -561,7 +561,7 @@ table td {font-size:14px;}
 .dealTable + .backButton > button.btn-primary:focus, .dealTable + button.btn-primary:active {outline: none;border:none;box-shadow: none;background: #AD4017;}
 .filterBlock, .dealspaceBlock {padding: 0px;transition:all ease 0.25s;-webkit-transition:all ease 0.25s;-moz-transition:all ease 0.25s;-o-transition:all ease 0.25s;font-family: "Dosis";}
 .filterTitle {border-bottom: 8px solid transparent;border-radius: 0px 2px 2px 2px;margin:10px;}
-.filterData, .dealspaceBlock p, .emailData {background: #C8BAC2;/* border: 1px solid rgb(146, 181, 187); *//* box-shadow: 0px 0px 3px rgb(137, 174, 181); */margin: 10px;padding: 8px;color: #fff;border-radius: 5px;}
+.filterData, .dealspaceBlock p, .emailData {background: #E6E4E8;/* border: 1px solid rgb(146, 181, 187); *//* box-shadow: 0px 0px 3px rgb(137, 174, 181); */margin: 10px;padding: 8px;color: #fff;border-radius: 5px;}
 .dealspaceBlock {text-align: center;}
 .filter, .filter p {color: #fff;line-height: 26px;}
 #accordion p {color: #000;}
@@ -632,7 +632,7 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .contact.available span {display: block;}
 .buyer .contentBox {background: #fff;color: #000;padding: 20px; border-radius: 5px; min-height: 550px;}
 .buyer .people {margin-top: 20px; background: #fff; padding: 5px;}
-.buyer .peopleDiv { margin-top: 10px; border-radius: 0px 2px 2px 2px; padding: 15px; background: #C8BAC2; }
+.buyer .peopleDiv { margin-top: 10px; border-radius: 0px 2px 2px 2px; padding: 15px; background: #E6E4E8; }
 .buyer .people .peopleList li button {background: none;border: none;padding: 0;}
 .buyer .people .peopleList li button:hover, .buyer .people .peopleList li button:active, .buyer .people .peopleList li button:focus {outline: none;}
 .modal-dialog.buyerModal {top: 30px;color: #000;}
@@ -640,8 +640,8 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .green-dot {text-align: left; padding: 10px;display: block;font-size: 12px;font-style: italic;}
 .green-dot:hover {text-decoration:none;}
 .green-dot span{color: #9a1b63;}
-.buyer a {color: #FF02CC;}
-.filter h2 {background: #C84D4D; color: #fff;border: none;font-family: "Dosis";}
+.buyer a {color: #320BA5;}
+.filter h2 {background: #C84D4D; color: #000;border: none;font-family: "Dosis";}
 .filter h2:active, .filter h2:focus {outline: none;}
 .buyer .ui-accordion-content.emailData {padding: 15px;}
 .buyer .ui-accordion-content.emailData h4 {font-size: 28px;margin: 10px auto 20px auto;font-style: italic;}
@@ -653,13 +653,13 @@ div.animate-switch.ng-scope .change:hover {opacity:1;}
 .buyer .filterTitle, .buyer .filterData { margin: 10px 0; }
 .bg_gray { background: #fff; }
 #emails { overflow: hidden; }
-.small_view, .large_view {/* margin: 20px 0; */ background: #fff; border: 1px solid #ccc;cursor: pointer;border-bottom: 3px solid #C8BAC2; color: #9a1b63;}
+.small_view, .large_view {/* margin: 20px 0; */ background: #fff; border: 1px solid #ccc;cursor: pointer;border-bottom: 3px solid #E6E4E8; color: #9a1b63;}
 .small_view div, .large_view div {border: 1px solid #ccc; border-right: none; border-bottom: none;font-size: 12px; line-height: 18px;word-break: break-word;padding: 0 8px; color: #9a1b63;}
 .large_view div:nth-of-type(1), .large_view div:nth-of-type(2), .large_view div:nth-of-type(3), .large_view div:nth-of-type(4) {border-top: none;}
 .large_view div:nth-of-type(4n+1){border-left: none;}
 .message_clickable {cursor: pointer;}
 .personEmail {color: #000;}
-.filterData a, .peopleList a {color:#FF02CC;}
+.filterData a, .peopleList a {color:#320BA5;}
 
 ::-webkit-input-placeholder {
     color:    #000;
