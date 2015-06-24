@@ -75,11 +75,11 @@
 																
 														<div class="large_view hidden-xs clearfix">
 
-															<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
-															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Name</div>
-															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Sender</div>
-															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Type</div>
-															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Date</div>
+															<div class="col-sm-2">Subject</div>
+															<div class="col-sm-2">Name</div>
+															<div class="col-sm-3">Sender</div>
+															<div class="col-sm-2">Type</div>
+															<div class="col-sm-3">Date</div>
 														</div>
 
 														<div ng-repeat="deal in single_dealspace | filter:search">
@@ -104,7 +104,7 @@
 																<div class="col-xs-6" data-toggle="modal" data-target="#document">Date</div>
 																<div class="col-xs-6" data-toggle="modal" data-target="#document">{{deal.Date}}</div>
 															</div>
-															
+
 															<div class="modalPeopleInfo">
 																<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 																	<div class="modal-dialog buyerModal">
