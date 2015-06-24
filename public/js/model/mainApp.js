@@ -173,6 +173,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.single_dealspace 	= angular.fromJson(data);
 				console.log($scope.single_dealspace);
 				$scope.dealspace_name 		= name;
+				$scope.dealCounter 			= 0;
 				$scope.dealspace_id 		= oid;
 				var participant_part 		= $scope.single_dealspace[0].pFrom.split(':');
 				$scope.participant_part 	= participant_part[0];

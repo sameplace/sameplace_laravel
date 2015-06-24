@@ -66,52 +66,60 @@
 										<h2 class="lightGrayBg ng-binding" style="background:#E6E4E8;"> {{dealspace.name}}</h2>
 									</div>
 									<div class="filterData" data-ng-init="sendAndCatchDataMime('get_mime', 'a8rzUb3ef')">
-										<div role="tabpanel" class="tab-pane fade in" id="emails" ng-repeat="deal in single_dealspace | filter:search">
-											
-											<div class="modalPeopleInfo">
-												<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-													<div class="modal-dialog buyerModal">
-														<div class="modal-content">
-															<div class="modal-header">
-																<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																<h4 class="modal-title" id="myModalLabel">{{deal.Subject}}</h4>
-															</div>
-															<div class="modal-body">
-																{{deal.Content}}
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+										<div role="tabpanel" class="tab-pane fade in" id="emails">
+
 
 											<div class="filterBlock col-xs-12 ng-scope">
 												<div class="filter clearfix">
+
+																
 														<div class="large_view hidden-xs clearfix">
+
 															<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
 															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Name</div>
 															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Sender</div>
 															<div class="col-sm-2" data-toggle="modal" data-target="#document" >Type</div>
 															<div class="col-sm-3" data-toggle="modal" data-target="#document" >Date</div>
-
-															<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
-															<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.Name}}</div>
-															<div class="col-sm-3" data-toggle="modal" data-target="#document" ><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
-															<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.MimeType}}</div>
-															<div class="col-sm-3" data-toggle="modal" data-target="#document" >{{deal.Date}}</div>
 														</div>
 
-														<div class="small_view hidden-sm hidden-md hidden-lg clearfix">
-															<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
-															<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">Name</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.Name}}</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">Sender</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">Type</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.MimeType}}</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">Date</div>
-															<div class="col-xs-6" data-toggle="modal" data-target="#document">{{deal.Date}}</div>
-														</div>
+														<div ng-repeat="deal in single_dealspace | filter:search">
+															<div class="large_view hidden-xs clearfix">
+
+																<div class="col-sm-2"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
+																<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.Name}}</div>
+																<div class="col-sm-3" data-toggle="modal" data-target="#document" ><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
+																<div class="col-sm-2" data-toggle="modal" data-target="#document" >{{mime.MimeType}}</div>
+																<div class="col-sm-3" data-toggle="modal" data-target="#document" >{{deal.Date}}</div>
+															</div>
+
+															<div class="small_view hidden-sm hidden-md hidden-lg clearfix">
+																<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">Subject</a></div>
+																<div class="col-xs-6"><a class="message_clickable" data-toggle="modal" data-target="#message_{{ deal.oid }}">{{deal.Subject}}</a></div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">Name</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.Name}}</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">Sender</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document"><a href="mailto:{{deal.FromAddr}}">{{deal.FromAddr}}</a></div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">Type</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">{{mime.MimeType}}</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">Date</div>
+																<div class="col-xs-6" data-toggle="modal" data-target="#document">{{deal.Date}}</div>
+															</div>
+															
+															<div class="modalPeopleInfo">
+																<div class="modal fade" id="message_{{ deal.oid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+																	<div class="modal-dialog buyerModal">
+																		<div class="modal-content">
+																			<div class="modal-header">
+																				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																				<h4 class="modal-title" id="myModalLabel">{{deal.Subject}}</h4>
+																			</div>
+																			<div class="modal-body">
+																				{{deal.Content}}
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
 
 
 															<div class="modal fade" id="document" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -136,6 +144,10 @@
 																	</div>
 																</div>
 															</div>
+															</div>
+
+											
+															
 
 												</div>
 											</div>
