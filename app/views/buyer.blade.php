@@ -6,10 +6,10 @@
 	<div class="container">
 		<div class="col-xs-12">
 			<div class="buyerInfo clearfix">
-				<div class="col-xs-3">
+				<div class="col-xs-6">
 					<img class="img-responsive" src="/images/female.jpg" alt="" width="200">
 				</div>
-				<div class="col-xs-9">
+				<div class="col-xs-6">
 					<div class="col-xs-6">
 						<div class="row">
 							<p class="name">Sue Smith, VP / Sales</p>
