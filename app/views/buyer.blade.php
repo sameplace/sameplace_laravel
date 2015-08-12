@@ -6,20 +6,20 @@
 	<div class="container">
 		<div class="col-xs-12">
 			<div class="buyerInfo clearfix">
-				<div class="col-xs-6">
+				<div class="col-xs-12">
 					<img class="img-responsive" src="/images/female.jpg" alt="" width="200">
 				</div>
 				<div class="col-xs-6">
-					<div class="col-xs-6">
+					<div class="col-xs-12 clear">
+						<a class="green-dot" href="mailto:sue@seller.com">Sue is available now.<br><span>Click here</span> to contact her.</a>
+					</div>
+					<div class="col-xs-12">
 						<div class="row">
 							<p class="name">Sue Smith, VP / Sales</p>
-							<p class="email">650.814.8981 // <a href="mailto:sue@seller.com">sue@seller.com</a></p>
-							<p class="socials"><a href="http://www.linkedin.com/in/mdrummond/en">LinkedIN</a> // <a href="http://www.facebook.com/wowd">Facebook</a></p>
+							<p class="email">650.814.8981 <a href="mailto:sue@seller.com">sue@seller.com</a></p>
+							<p class="socials"> <a href="http://www.linkedin.com/in/mdrummond/en">LinkedIN</a> <a href="http://www.facebook.com/wowd">Facebook</a></p>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-3 clear">
-					<a class="green-dot" href="mailto:sue@seller.com">Sue is available now.<br><span>Click here</span> to contact her.</a>
 				</div>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 
 						</ul>
 						<div class="userMail clearfix">
-							<input class="col-xs-12 col-sm-8 personEmail" type="text" id="person_email" placeholder="Person Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Person Email'" >  <button class="btn-success col-xs-12 col-sm-4">Add</button>
+							<input class="col-xs-12 col-sm-8 personEmail" type="text" id="person_email" placeholder="New Person Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Person Email'" >  <button class="btn-success col-xs-12 col-sm-4">Add</button>
 						</div>
 					</div>
 				</div>
