@@ -34,16 +34,19 @@
 
 <!-- applied module and controller -->
   <body ng-app="mainApp" ng-controller="mainController" @if($buyer_page) class="bg_gray" @endif >
-  <nav class="navbar navbar-default" role="navigation" id="header">
+  
+  <nav class="navbar navbar-default" role="navigation" id="header" @if(isset($home_page) && $home_page==true) style="background-color:#1C1C1C;" @endif >
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
      <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
+            @if($buyer_page==false) 
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+            @endif
            <a class="navbar-brand" href="/">Sameplace</a>
          </div>
          <div class="navbar-collapse collapse">

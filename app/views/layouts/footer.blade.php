@@ -1,4 +1,4 @@
-    <footer class="clearfix <% isset($footerBottom) ? $footerBottom : '' %>" >
+    <footer class="clearfix <% isset($footerBottom) ? $footerBottom : '' %>" @if(isset($home_page) && $home_page==true) style="background-color:#1C1C1C; height: 50px;" @endif >
     <div class="back_up"><a id="goTop" href="javascript:void(0)">^<span>Back to top</span></a></div>
     </footer>
 
